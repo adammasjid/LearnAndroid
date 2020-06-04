@@ -10,5 +10,5 @@ files:
         println("Data Class")
     }
   learner_created: false
-status: Unchecked
+status: Solved
 record: -1

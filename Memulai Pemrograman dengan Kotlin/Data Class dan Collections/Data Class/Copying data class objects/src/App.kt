@@ -7,4 +7,8 @@ fun main(){
     val dataUser4 = dataUser.copy()
 
     println(dataUser4)
+
+    // Tanpa data class, untuk melakukan tugas seperti ini kita memerlukan sebuah instance baru untuk mengubah nilai dari suatu objek.
+    // Dengan demikian kita harus memodifikasi properti yang kita maksud.
+    // Tugas ini akan berulang dan membuat kode yang kita tulis, jauh dari paradigma clean code.
 }

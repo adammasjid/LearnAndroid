@@ -15,5 +15,5 @@ files:
         println(notEvenList)
     }
   learner_created: false
-status: Unchecked
+status: Solved
 record: -1

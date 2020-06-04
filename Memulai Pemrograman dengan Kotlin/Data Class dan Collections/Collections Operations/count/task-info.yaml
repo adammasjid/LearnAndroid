@@ -12,5 +12,5 @@ files:
         print(numberList.count { it % 3 == 0 })
     }
   learner_created: false
-status: Unchecked
+status: Solved
 record: -1
