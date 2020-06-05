@@ -15,5 +15,5 @@ files:
         println(someDouble is Double)
     }
   learner_created: false
-status: Unchecked
+status: Solved
 record: -1

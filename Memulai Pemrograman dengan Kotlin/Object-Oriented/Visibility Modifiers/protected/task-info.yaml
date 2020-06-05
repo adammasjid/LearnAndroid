@@ -15,5 +15,5 @@ files:
         // println("Berat Kucing: ${cat.weight}") <- Cannot access 'weight': it is protected in 'Cat'
     }
   learner_created: false
-status: Unchecked
+status: Solved
 record: -1

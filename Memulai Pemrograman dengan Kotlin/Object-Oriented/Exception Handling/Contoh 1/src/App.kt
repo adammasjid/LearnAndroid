@@ -1,4 +1,4 @@
-// main function
+    // main function
 fun main() {
     val someNullValue: String? = null
     lateinit var someMustNotNullValue: String

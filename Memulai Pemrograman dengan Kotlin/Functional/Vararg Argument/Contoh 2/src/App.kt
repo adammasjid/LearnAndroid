@@ -1,9 +1,10 @@
 // main function
 fun main() {
-    sets(10, 10, name = "Kotlin")
+    // pada saat set parameter harus menggunakan named argument agar tidak error
+    sets(10,10, name = "Kotlin")
 }
-
-fun sets(vararg number: Int, name: String): Int {
+// bisa memasukan type data yang berbeda
+fun sets(vararg number: Int, name: String): Any {
     println(name)
-    return number.sum()
+    return println(number.sum())
 }

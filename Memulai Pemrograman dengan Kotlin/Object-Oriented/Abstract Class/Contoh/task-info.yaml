@@ -19,5 +19,5 @@ files:
         println("Abstract Class")
     }
   learner_created: false
-status: Unchecked
+status: Solved
 record: -1

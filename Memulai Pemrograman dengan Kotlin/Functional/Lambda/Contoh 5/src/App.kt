@@ -8,8 +8,8 @@ fun main() {
 
     println(message)
 }
-
-fun buildString(action: StringBuilder.() -> Unit): String {
+                                      // Unit adalah tipe return jika () tidak ada param di lambda
+fun buildString(action: StringBuilder.() -> Unit ): String {
     val stringBuilder = StringBuilder()
     stringBuilder.action()
     return stringBuilder.toString()

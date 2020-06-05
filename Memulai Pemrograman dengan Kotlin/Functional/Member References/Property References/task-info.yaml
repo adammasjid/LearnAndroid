@@ -14,5 +14,5 @@ files:
         println(::message.get())
     }
   learner_created: false
-status: Unchecked
+status: Solved
 record: -1
