@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">PopularProgrammingLanguage</string>
+    <string name="name_lang">Programming Language</string>
+    <string name="content_main">Popular Programming Language by StackOverFlow</string>
+    <string name="overview">overview</string>
+    <string name="language_detail">Language Detail</string>
+    <string name="language_overview">Language Overview</string>
+    <string name="content_overview">content overview</string>
+    <string name="content_identity">content identity</string>
+    <string name="title_identity">Designed By \nFirst appeared \nParadigm \nExtension Filename </string>
+    <string name="name_me">Adam Masjid Fajar P</string>
+    <string name="email_me">adammasjid77@gmail.com</string>
+    <string name="rank">Popular Rank </string>
+    <string name="source">Source:\nhttps://en.wikipedia.org</string>
+    <string name="todo">TODO</string>
+    <string name="profile">profile</string>
+</resources>

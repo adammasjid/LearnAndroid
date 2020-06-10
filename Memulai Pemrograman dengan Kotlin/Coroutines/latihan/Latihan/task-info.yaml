@@ -4,7 +4,7 @@ files:
   visible: true
   placeholders:
   - offset: 211
-    length: 55
+    length: 94
     placeholder_text: |-
       fun sum(valueA: Int, valueB: Int): Int {
           return 0
@@ -18,10 +18,10 @@ files:
           delay(3000)
           return valueA + valueB
       }
-    selected: false
-    status: Unchecked
-  - offset: 278
-    length: 60
+    selected: true
+    status: Solved
+  - offset: 317
+    length: 99
     placeholder_text: |-
       fun multiple(valueA: Int, valueB: Int): Int {
           return 0
@@ -35,10 +35,10 @@ files:
           delay(2000)
           return valueA * valueB
       }
-    selected: false
-    status: Unchecked
-  - offset: 509
-    length: 9
+    selected: true
+    status: Solved
+  - offset: 587
+    length: 125
     placeholder_text: println()
     initial_state:
       length: 9
@@ -49,8 +49,8 @@ files:
               Result sum: ${resultSum.await()}
               Result multiple: ${resultMultiple.await()}
           """.trimIndent())
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
   text: |-
     /**
      * Untuk menyelesaikan tugas latihan, Anda tidak diperbolehkan mengubah kode yang sudah ada.
@@ -87,5 +87,5 @@ files:
     Result sum: 20
     Result multiple: 400
   learner_created: false
-status: Unchecked
+status: Solved
 record: -1

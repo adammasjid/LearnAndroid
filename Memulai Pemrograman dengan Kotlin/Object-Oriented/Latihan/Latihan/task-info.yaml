@@ -3,16 +3,16 @@ files:
 - name: src/Task.kt
   visible: true
   placeholders:
-  - offset: 335
-    length: 19
+  - offset: 620
+    length: 24
     placeholder_text: val gippy = Cat("")
     initial_state:
       length: 19
       offset: 335
     initialized_from_dependency: false
     possible_answer: val gippy = Cat("Gippy")
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
   text: |-
     /**
      * Untuk menyelesaikan tugas latihan, Anda tidak diperbolehkan mengubah kode yang sudah ada.
@@ -47,5 +47,5 @@ files:
     Fungsi getter dipanggil
     Gippy, sleep!
   learner_created: false
-status: Unchecked
+status: Solved
 record: -1

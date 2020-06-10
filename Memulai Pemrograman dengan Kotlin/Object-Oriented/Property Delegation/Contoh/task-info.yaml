@@ -47,5 +47,5 @@ files:
         println("Nama Pahlawan: ${hero.name}")
     }
   learner_created: false
-status: Unchecked
+status: Solved
 record: -1
