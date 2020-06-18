@@ -5,5 +5,5 @@ fun main() {
     do {
         println("Hello, World!")
         counter++
-    } while (counter <= 7)
+    } while (counter <= 0)
 }

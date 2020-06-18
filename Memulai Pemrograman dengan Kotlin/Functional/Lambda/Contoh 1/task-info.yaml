@@ -11,5 +11,5 @@ files:
 
     val printMessage = { message: String -> println(message) }
   learner_created: false
-status: Solved
+status: Unchecked
 record: -1

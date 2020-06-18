@@ -15,6 +15,14 @@ class Cat(pName: String, pWeight: Double, pAge: Int, pIsCarnivore: Boolean, val 
     fun playWithHuman() {
         println("$name bermain bersama Manusia!")
     }
+
+    override fun eat(){
+        println("$name sedang memakan ikan!")
+    }
+
+    override fun sleep() {
+        println("$name sedang tidur di bantal!")
+    }
 }
 
 fun main(){

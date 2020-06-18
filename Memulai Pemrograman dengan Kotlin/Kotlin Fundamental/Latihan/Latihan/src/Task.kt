@@ -1,8 +1,12 @@
 /**
- * Untuk menyelesaikan tugas latihan, Anda tidak diperbolehkan mengubah kode yang sudah ada.
+ * Untuk menyelesaikan tugas latihan, Anda tidak diperbolehkan mengubah struktur kode yang sudah ada. Kecuali:
+ *    - Untuk melakukan improvisasi kode
+ *    - Mengikuti perintah yang ada
+ *
  * Cukup tambahkan kode berdasarkan perintah yang sudah ditentukan.
  *
  */
+
 fun main() {
     val valueA = 101
     val valueB = 52
@@ -19,7 +23,7 @@ fun main() {
 
 fun calculateResult(valueA: Int, valueB: Int, valueC: Int?): Int {
     // TODO
-    val c = valueC ?: 50
-    return valueA + (valueB - c)
-
+    val c = valueC?: 50
+    val result = valueA + (valueB - c )
+    return result
 }

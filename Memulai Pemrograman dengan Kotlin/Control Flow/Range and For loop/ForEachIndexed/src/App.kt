@@ -5,8 +5,4 @@ fun main() {
     ranges.forEachIndexed { index, value ->
         println("value $value with index $index")
     }
-    // bisa juga jika parameter diganti _
-    ranges.forEachIndexed {index, _ ->
-        println("Index $index")
-    }
 }

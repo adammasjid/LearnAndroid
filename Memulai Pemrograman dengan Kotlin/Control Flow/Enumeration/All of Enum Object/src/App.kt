@@ -1,8 +1,8 @@
 // main function
 fun main() {
     val colors: Array<Color> = Color.values()
-    colors.forEach { color ->
-        println(color)
+    colors.forEach {
+        println(it.value)
     }
 }
 

@@ -8,4 +8,6 @@ fun main() {
         8 -> println("value is 8")
         else -> println("value cannot be reached")
     }
-}// type your solution here
+    // if when expression that has a return, but without branch else, then will be an error message :
+    // 'when' expression must be exhaustive, add necessary 'else' branch
+}

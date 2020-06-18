@@ -1,8 +1,7 @@
 // main function
 fun main() {
     val number = intArrayOf(10, 20, 30, 40)
-    // berbeda dengan Array<T> , varargs bisa menampung array didalam parameter
-    println(sets(10, 20, 20, *number , 10)) // menggunakan symbol * untuk memasukan array di params
+    sets(10, 20, 20, *number , 10)
 }
 
 fun sets(vararg number: Int): Int {

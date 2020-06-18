@@ -1,12 +1,10 @@
 // main function
 fun main() {
     val colorRed = Color.RED
-    val colorGreen = Color.GREEN
-    val colorBlue = Color.BLUE
-
+    // Enumeration dapat ditetapkan sebagai nilai ke dalam sebuah variabel dengan cara yang lebih efisien
     colorRed.printValue()
-    colorGreen.printValue()
-    colorBlue.printValue()
+    Color.GREEN.printValue()
+    Color.BLUE.printValue()
 }
 
 enum class Color(val value: Int) {

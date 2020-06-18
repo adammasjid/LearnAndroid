@@ -9,9 +9,5 @@ fun sum(valueA: Int, valueB: Int, valueC: Int): Int {
     valueB.validateNumber()
     valueC.validateNumber()
 
-    return valueA + valueB + valueC
-}
-
-fun main () {
-    println(sum(2,3,0))
+    return valueA + valueB
 }

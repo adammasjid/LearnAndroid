@@ -1,6 +1,6 @@
 // main function
 fun main() {
-    printResult(20 ,sum)
+    printResult(10 ,sum)
 }
 
 fun printResult(value: Int, sum: (Int) -> Int) {
