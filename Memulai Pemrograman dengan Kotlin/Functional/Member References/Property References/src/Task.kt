@@ -7,4 +7,7 @@ fun main() {
     ::message.set("Kotlin Academy")
 
     println(::message.get())
-}
+}//              |
+//               |
+//               V
+//   property reference with keyword ::

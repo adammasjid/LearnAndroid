@@ -11,6 +11,5 @@ fun main() {
 
 fun buildString(action: StringBuilder.() -> Unit): String {
     val stringBuilder = StringBuilder()
-    stringBuilder.action()
-    return stringBuilder.toString()
+    return stringBuilder.action().toString()
 }

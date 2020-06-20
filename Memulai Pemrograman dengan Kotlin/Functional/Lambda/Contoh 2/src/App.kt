@@ -5,3 +5,7 @@ fun main() {
 }
 
 val messageLength = { message: String -> message.length }
+//                                                |
+//                                                |
+//                                                V
+//                               pembatas antara head dan body lambda

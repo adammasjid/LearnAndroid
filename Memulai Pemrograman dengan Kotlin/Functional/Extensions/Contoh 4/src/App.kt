@@ -2,8 +2,9 @@
 fun main() {
     val value: Int? = null
 
-    println(value.slice)
+    println(value.slice())
 }
 
-val Int?.slice: Int
-    get() = this?.div(2) ?: 0
+fun Int?.slice(): Int {
+    return this?.div(2) ?: 0
+}

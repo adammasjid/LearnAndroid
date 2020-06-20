@@ -1,5 +1,8 @@
 typealias Arithmetic = (Int, Int) -> Int
-
+//   |        |________________________________
+//   |                                         |
+//   V                                         V
+//keyword untuk menyederhanakan lambda    typealias name
 val sum: Arithmetic = { valueA, valueB -> valueA + valueB }
 
 val multiply: Arithmetic = { valueA, valueB -> valueA * valueB }

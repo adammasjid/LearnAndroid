@@ -4,3 +4,7 @@ fun main() {
 }
 
 val printMessage = { message: String -> println(message) }
+//                                  |        |_________
+//                                  |                  |
+//                                  V                  V
+//                            parameter lambda   return type lambda
