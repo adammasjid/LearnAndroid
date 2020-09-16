@@ -1,0 +1,31 @@
+													FUNDAMENTAL ANDROID
+													
+	Cara untuk membaca dokmentasi = https://developer.android.com/docs / ctrl + Q pada android studio untuk membaca dokumentasi												
+	progress belajar : https://www.dicoding.com/academies/14/tutorials/143													
+
+*	Komponen dasar yang digunakan untuk membuat aplikasi android :
+	- Activity = adalah hal yang menangani window (tampilan) yang akan ditampilkan di interface, dan activity memiliki life cycle bawaan android
+	- Intent = untuk menjalankan sebuah activity, mengirim sebuat broadcast receiver, dan dapat juga berkomunikasi dengan service yang berjalan
+	- Fragment = komponen view yang fleksibel dan dapat disisipkan pada sebuah tampilan dari activity. Fragment memiliki daur hidup sendiri sehingga tidak tergantung pada activity yang disisipkan. 
+	- threads = Semua proses yang ada di dalam sebuah aplikasi ada di dalam thread. Secara default, proses yang tampil di layar merupakan proses yang ada di dalam main thread / ui thread.
+	- service = Service merupakan komponen tidak terlihat yang dapat digunakan untuk menjalankan suatu proses di dalam aplikasi. 
+	- Receiver = Receiver menggunakan pola publish-subscribe. Ketika terjadi sebuah event dibangkitkan (di-publish), komponen lain yang telah mendaftar
+			  untuk mendengarkan event tersebut (subscribed) dapat menjalankan perintah-perintah tertentu.
+		
+1. Activity : ( https://developer.android.com/guide/components/activities )
+	- WAJIB untuk mengetahuii life cycle dari Activity ( https://developer.android.com/guide/components/activities#Lifecycle )
+	- Activity merupakan salah satu komponen penting Android yang memiliki daur hidup (life cycle) dalam sebuah stack pada virtual sandbox
+	  yang disiapkan oleh Dalvik Virtual Machine (DVM) atau Android Runtime (ART) yang bersifat last in first out.
+	- Sebuah class Java / kotlin dinyatakan sebuah activity jika mewarisi (extends) superclass Activity atau turunannya seperti AppCompatActivity dan FragmentActivity.
+	- method yang ada pada lifeCycle Activity disebut CallBack Method digunakan untuk melakukan proses terkait state pada activity
+
+2. Intent adalah mekanisme untuk melakukan sebuat action / komunikasi antar komponen seperti activity, services, dan broadcast receiver
+	- intent terbagi menjadi dua yaitu, intent exsplisit dan implisit
+		# intent explisit adalah intent yang memerlukan nama kelas yang ditiju untuk mengaktivkan komponen tersebut
+		# intent implisit Adalah tipe intent yang tidak memerlukan detail nama kelas yang ingin diaktifkan. Model ini memungkinkan komponen dari aplikasi lain bisa merespon request intent yang dijalankan.
+		# ( https://developer.android.com/training/basics/intents/result.html = intent result )
+		# ( https://developer.android.com/guide/components/intents-filters.html = intent filters )
+
+3. View and ViewGroup : ( https://developer.android.com/guide/topics/ui/declaring-layout )
+	- view (widget) adalah obyek yang menggambar komponen tampilan ke layar yang mana pengguna dapat melihat dan berinteraksi langsung. 
+	- viewgroup (layout) adalah sebuah objek yang mewadahi obyek-obyek view dan viewgroup itu sendiri sehingga membentuk satu kesatuan tampilan aplikasi yang utuh. 
