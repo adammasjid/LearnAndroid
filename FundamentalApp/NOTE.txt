@@ -1,7 +1,7 @@
 													FUNDAMENTAL ANDROID
 													
 	Cara untuk membaca dokmentasi = https://developer.android.com/docs / ctrl + Q pada android studio untuk membaca dokumentasi												
-	progress belajar : https://www.dicoding.com/academies/14/tutorials/143													
+	progress belajar : https://www.dicoding.com/academies/14/tutorials/3452?from=151												
 
 *	Komponen dasar yang digunakan untuk membuat aplikasi android :
 	- Activity = adalah hal yang menangani window (tampilan) yang akan ditampilkan di interface, dan activity memiliki life cycle bawaan android
@@ -31,6 +31,9 @@
 	- didalam fragment kita bisa menerapkan back stack dengan method addToBackStack()
 	- Jika Anda menambahkan transaksi ke dalam back stack, maka ia disimpan di dalam back stack, sehingga ketika Anda menekan tombol back, maka activity akan memanggil transaksi sebelumnya.
 	- fragment memiliki life cycle nya sendiri yang berbeda dengan activity
+	- sedikit perbedaan antara Activity dan Fragment dari segi code :
+	  a) Context menggunakan getActivity/activity, bukan this@MainActivity/MainActivity.this
+	  b) Pemanggilan id menggunakan view.findFiewById, bukan findFiewById
 
 3. View and ViewGroup : ( https://developer.android.com/guide/topics/ui/declaring-layout )
 	- view (widget) adalah obyek yang menggambar komponen tampilan ke layar yang mana pengguna dapat melihat dan berinteraksi langsung. 

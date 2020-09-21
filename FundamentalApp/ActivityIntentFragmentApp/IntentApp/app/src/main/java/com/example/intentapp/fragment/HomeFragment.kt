@@ -6,45 +6,26 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import androidx.fragment.app.FragmentManager
 import com.example.intentapp.R
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [HomeFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class HomeFragment : Fragment(), View.OnClickListener {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
-
-    override fun onClick(v: View) {
-        // TODO("Not yet implemented")
-    }
 
     // method ini untuk layout interface yang didefinisikan dan ditransformasikan dari layout berupa file xml ke dalam objek view
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_home, container, false)
+        /**
+         * @Explaining
+         * inflater.inflate() merupakan objek dari LayoutInflater yang berfungsi untuk ...
+         * mengubah layout xml ke dalam bentuk objek viewer oup atau widget melalui pemanggilan metode inflate()
+         * fungsi inflate di sini yaitu untuk menampilkan layout dari Fragment,
+         * di mana layout yang ditampilkan di sini yaitu fragment_home
+         */
     }
-
     /**
      *  metode onViewCreated() yang akan bekerja setelah metode onCreateView().
      *  Di sini kita bisa gunakan untuk inisialisasi view, dan juga mengatur action-nya (set listener).
@@ -52,31 +33,28 @@ class HomeFragment : Fragment(), View.OnClickListener {
     // Penyesuaian kode pada Fragment
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val btnCategory:Button = view.findViewById(R.id.btn_category)
+        val btnCategory: Button = view.findViewById(R.id.btn_category)
+                                // menggunakan view karena btnCategory berada pada object view bukan root layout
         btnCategory.setOnClickListener(this)
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment HomeFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            HomeFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
+    override fun onClick(v: View) {
+        // TODO("Not yet implemented")
+        if (v.id == R.id.btn_category) {
+            /**
+             * Berbeda dengan Activity yang memanfaatkan supportFragmentManager,
+             * Fragment menggunakan [fragmentManager] untuk mendapatkan FragmentManager.
+             * Setelah mendapatkannya, Anda dapat memulai transaksi pergantian fragment.
+             */
+            val mFragmentManager = fragmentManager
+
+            val mCategoryFragment = CategoryFragment()
+            mFragmentManager?.beginTransaction()?.apply {
+                replace(R.id.frame_container, mCategoryFragment, CategoryFragment::class.java.simpleName) // menggunakan method replace
+                addToBackStack(null) // method untuk kembali ke fragment sebelumnya
+                commit()
             }
+        }
     }
 
-//    override fun onClick(p0: View?) {
-//        TODO("Not yet implemented")
-//    }
 }
