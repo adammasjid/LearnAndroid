@@ -25,6 +25,12 @@
 		# intent implisit Adalah tipe intent yang tidak memerlukan detail nama kelas yang ingin diaktifkan. Model ini memungkinkan komponen dari aplikasi lain bisa merespon request intent yang dijalankan.
 		# ( https://developer.android.com/training/basics/intents/result.html = intent result )
 		# ( https://developer.android.com/guide/components/intents-filters.html = intent filters )
+		
+3. Fragment : ( https://developer.android.com/guide/components/fragments )
+	- salah satu penggunaan fragment adalah untuk membuat banyak tampilan tanpa berpindah-pindah activity
+	- didalam fragment kita bisa menerapkan back stack dengan method addToBackStack()
+	- Jika Anda menambahkan transaksi ke dalam back stack, maka ia disimpan di dalam back stack, sehingga ketika Anda menekan tombol back, maka activity akan memanggil transaksi sebelumnya.
+	- fragment memiliki life cycle nya sendiri yang berbeda dengan activity
 
 3. View and ViewGroup : ( https://developer.android.com/guide/topics/ui/declaring-layout )
 	- view (widget) adalah obyek yang menggambar komponen tampilan ke layar yang mana pengguna dapat melihat dan berinteraksi langsung. 

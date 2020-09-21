@@ -1,8 +1,9 @@
-package com.example.intentapp
+package com.example.intentapp.intent
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
+import com.example.intentapp.R
 
 class MoveWithDataActivity : AppCompatActivity() {
     companion object {

@@ -8,6 +8,12 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
+import com.example.intentapp.fragment.FlexibleFragment
+import com.example.intentapp.intent.MoveActivity
+import com.example.intentapp.intent.MoveForResultActivity
+import com.example.intentapp.intent.MoveWithDataActivity
+import com.example.intentapp.intent.MoveWithObjectActivity
+import com.example.intentapp.model.Person
 import kotlinx.android.synthetic.main.activity_main.*
 
 /**
@@ -27,6 +33,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        //intent activity
         val btnMoveActivity: Button = findViewById(R.id.btn_move_activity)
         btnMoveActivity.setOnClickListener(this)
         val btnMoveWithDataActivity: Button = findViewById(R.id.btn_move_activity_data)
@@ -41,6 +48,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         btnMoveForResult.setOnClickListener(this)
 
         tvResult= findViewById(R.id.tv_result)
+        //fragment
+        val btnMoveToFragment: Button = findViewById(R.id.btn_move_to_fragment)
+        btnMoveToFragment.setOnClickListener(this)
+
     }
 
     override fun onClick(v: View?) {
@@ -89,6 +100,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 val moveForResultIntent = Intent(this@MainActivity, MoveForResultActivity::class.java)
                 // below Intent method for return value
                 startActivityForResult(moveForResultIntent, REQUEST_CODE)
+            }
+            R.id.btn_move_to_fragment -> {
+                val moveToFragment = Intent(this@MainActivity, FlexibleFragment::class.java)
+                startActivity(moveToFragment)
             }
         }
     }

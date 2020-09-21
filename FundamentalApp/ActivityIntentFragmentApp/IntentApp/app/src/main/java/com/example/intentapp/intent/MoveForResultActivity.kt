@@ -1,11 +1,11 @@
-package com.example.intentapp
+package com.example.intentapp.intent
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import android.widget.RadioButton
 import android.widget.RadioGroup
+import com.example.intentapp.R
 import kotlinx.android.synthetic.main.activity_move_for_result.*
 
 class MoveForResultActivity : AppCompatActivity() {

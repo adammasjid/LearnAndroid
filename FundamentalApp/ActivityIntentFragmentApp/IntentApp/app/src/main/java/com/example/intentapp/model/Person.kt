@@ -1,4 +1,4 @@
-package com.example.intentapp
+package com.example.intentapp.model
 
 import android.os.Parcel
 import android.os.Parcelable
