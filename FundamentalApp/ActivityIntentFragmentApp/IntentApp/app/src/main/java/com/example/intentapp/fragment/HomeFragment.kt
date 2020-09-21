@@ -31,25 +31,29 @@ class HomeFragment : Fragment(), View.OnClickListener {
         }
     }
 
+    override fun onClick(v: View) {
+        // TODO("Not yet implemented")
+    }
+
+    // method ini untuk layout interface yang didefinisikan dan ditransformasikan dari layout berupa file xml ke dalam objek view
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_home, container, false)
+    }
+
+    /**
+     *  metode onViewCreated() yang akan bekerja setelah metode onCreateView().
+     *  Di sini kita bisa gunakan untuk inisialisasi view, dan juga mengatur action-nya (set listener).
+     */
     // Penyesuaian kode pada Fragment
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val btnCategory:Button = view.findViewById(R.id.btn_category)
         btnCategory.setOnClickListener(this)
-    }
-
-    override fun onClick(v: View) {
-        // TODO("Not yet implemented")
-    }
-
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // untuk layout interface didefinisikan dan ditransformasikan dari layout berupa file xml ke dalam objek view
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false)
     }
 
     companion object {
