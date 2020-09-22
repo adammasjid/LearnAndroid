@@ -34,7 +34,17 @@
 	- sedikit perbedaan antara Activity dan Fragment dari segi code :
 	  a) Context menggunakan getActivity/activity, bukan this@MainActivity/MainActivity.this
 	  b) Pemanggilan id menggunakan view.findFiewById, bukan findFiewById
+	  
+4. Widget (komponen tampilan) :
 
-3. View and ViewGroup : ( https://developer.android.com/guide/topics/ui/declaring-layout )
-	- view (widget) adalah obyek yang menggambar komponen tampilan ke layar yang mana pengguna dapat melihat dan berinteraksi langsung. 
-	- viewgroup (layout) adalah sebuah objek yang mewadahi obyek-obyek view dan viewgroup itu sendiri sehingga membentuk satu kesatuan tampilan aplikasi yang utuh. 
+	@ ListView
+		- langkah untuk menerapkan listview : ( https://developer.android.com/reference/android/widget/Adapter )
+		  a) Tambahkan objek listview di berkas layout xml dari activity / fragment.
+		  b) Definisikan model kelas yang akan digunakan sebagai data source.
+		  c) Buat berkas layout xml untuk baris item di listview.
+		  d) Buat sebuah kelas adapter yang inherit ke BaseAdapter.
+		  e) Definisikan objek listview dan selanjutnya pasang objek adapter (binding) agar bisa menampilkan koleksi data ke dalam ListView.
+		  
+	@ View and ViewGroup : ( https://developer.android.com/guide/topics/ui/declaring-layout )
+		- view (widget) adalah obyek yang menggambar komponen tampilan ke layar yang mana pengguna dapat melihat dan berinteraksi langsung. 
+		- viewgroup (layout) adalah sebuah objek yang mewadahi obyek-obyek view dan viewgroup itu sendiri sehingga membentuk satu kesatuan tampilan aplikasi yang utuh. 

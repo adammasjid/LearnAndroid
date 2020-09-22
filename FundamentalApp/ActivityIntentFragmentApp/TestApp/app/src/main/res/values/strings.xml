@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">TestApp</string>
+    <string name="intro"> </string>
+    <string name="move_activity">Pindah Activity</string>
+    <string name="move_with_data">Pindah Activity dengan Data</string>
+    <string name="move_with_object">Pindah Activity dengan Object</string>
+    <string name="dial_number">Dial a Number</string>
+    <string name="data_received">Data Diterima</string>
+    <string name="object_received">Data Diterima</string>
+    <string name="this_is_moveactivity">Ini MoveActivity</string>
+    <string name="length">Panjang</string>
+    <string name="barVolume">Bar Volume</string>
+    <string name="width">Lebar</string>
+    <string name="height">Tinggi</string>
+    <string name="calculate">Hitung</string>
+    <string name="result">Hasil</string>
+    <string name="choose_number">choose_number</string>
+    <string name="_50">50</string>
+    <string name="_100">100</string>
+    <string name="_150">150</string>
+    <string name="_200">200</string>
+    <string name="choose">Pilih</string>
+    <string name="move_with_result"> Move With Result </string>
+    <string name="fragment">Flexible Fragment</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="this_profile">Ini activity Profile</string>
+    <string name="this_category">Ini fragment Category</string>
+    <string name="category_lifestyle">Ke fragment Lifestyle</string>
+    <string name="category_name">Category Name</string>
+    <string name="category_description">Category Description</string>
+    <string name="to_profile">Ke Halaman Profile Activity</string>
+    <string name="show_dialog">Tampilkan sebuah dialog</string>
+    <string name="hello_home_fragment">Hello Ini Home Fragment</string>
+    <string name="to_category">Ke fragment Category</string>
+    <string name="question_coach">Siapa pelatih tersukses Machester United?</string>
+    <string name="sir_alex_ferguson">Sir Alex Ferguson</string>
+    <string name="jose_mourinho">Jose Mourinho</string>
+    <string name="louis_van_gaal">Louis Van Gaal</string>
+    <string name="david_moyes">David Moyes</string>
+    <string name="close">Tutup</string>
+</resources>
