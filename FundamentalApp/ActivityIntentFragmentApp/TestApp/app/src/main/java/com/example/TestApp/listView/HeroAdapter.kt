@@ -9,6 +9,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import com.example.TestApp.R
 import com.example.TestApp.model.Hero
+import kotlinx.android.synthetic.main.item_hero.view.*
 
 class HeroAdapter internal constructor(private val context: Context) : BaseAdapter() {
     internal var heroes = arrayListOf<Hero>()
@@ -40,15 +41,15 @@ class HeroAdapter internal constructor(private val context: Context) : BaseAdapt
         return itemView
     }
     // dibawah adalah inner class untuk casting object pada layout
-    private inner class ViewHolder constructor(private val view: View) {
-        private val txtName: TextView = view.findViewById(R.id.txt_name)
-        private val txtDescription: TextView = view.findViewById(R.id.txt_description)
-        private val imgPhoto: ImageView = view.findViewById(R.id.img_photo)
-
-        internal fun bind(hero: Hero) {
-            txtName.text = hero.name
-            txtDescription.text = hero.description
-            imgPhoto.setImageResource(hero.photo)
+     private inner class ViewHolder constructor(private val view: View) {
+        fun bind(hero: Hero) {
+            // ini menggunakan kotlin android extension
+            // penggunaan with dibawah untuk menyederhanakan syntax tanpa perlu extensions dari param view
+            with(view) {
+                txt_name.text = hero.name
+                txt_description.text = hero.description
+                img_photo.setImageResource(hero.photo)
+            }
         }
     }
 }
