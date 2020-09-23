@@ -8,14 +8,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.example.TestApp.fragment.ProfileActivity" />
-        <activity android:name="com.example.TestApp.fragment.FlexibleFragment" />
-        <activity android:name="com.example.TestApp.intent.MoveForResultActivity" />
-        <activity android:name="com.example.TestApp.intent.MoveWithObjectActivity" />
-        <activity android:name="com.example.TestApp.BarVolume" />
-        <activity android:name="com.example.TestApp.intent.MoveWithDataActivity" />
-        <activity android:name="com.example.TestApp.intent.MoveActivity" />
-        <activity android:name="com.example.TestApp.MainActivity">
+        <activity android:name=".DebugActivity"></activity>
+
+        <meta-data
+            android:name="com.google.android.wearable.standalone"
+            android:value="true" />
+
+        <activity android:name=".listView.ListViewActivity" />
+        <activity android:name=".fragment.ProfileActivity" />
+        <activity android:name=".fragment.FlexibleFragment" />
+        <activity android:name=".intent.MoveForResultActivity" />
+        <activity android:name=".intent.MoveWithObjectActivity" />
+        <activity android:name=".BarVolume" />
+        <activity android:name=".intent.MoveWithDataActivity" />
+        <activity android:name=".intent.MoveActivity" />
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <!-- Baris di atas bermakna bahwa MainActivity menjadi entry point ke aplikasi. -->

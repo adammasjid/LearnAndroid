@@ -1,7 +1,7 @@
 													FUNDAMENTAL ANDROID
 													
 	Cara untuk membaca dokmentasi = https://developer.android.com/docs / ctrl + Q pada android studio untuk membaca dokumentasi												
-	progress belajar : https://www.dicoding.com/academies/14/tutorials/3452?from=151												
+	progress belajar : https://www.dicoding.com/academies/14/tutorials/1063?from=572												
 
 *	Komponen dasar yang digunakan untuk membuat aplikasi android :
 	- Activity = adalah hal yang menangani window (tampilan) yang akan ditampilkan di interface, dan activity memiliki life cycle bawaan android
@@ -38,13 +38,54 @@
 4. Widget (komponen tampilan) :
 
 	@ ListView
-		- langkah untuk menerapkan listview : ( https://developer.android.com/reference/android/widget/Adapter )
+		- langkah untuk menerapkan listview : ( https://developer.android.com/reference/android/widget/Adapter	 )
 		  a) Tambahkan objek listview di berkas layout xml dari activity / fragment.
 		  b) Definisikan model kelas yang akan digunakan sebagai data source.
 		  c) Buat berkas layout xml untuk baris item di listview.
 		  d) Buat sebuah kelas adapter yang inherit ke BaseAdapter.
 		  e) Definisikan objek listview dan selanjutnya pasang objek adapter (binding) agar bisa menampilkan koleksi data ke dalam ListView.
+	
+	@ Library
+		- Library adalah tools atau source code yang sudah dibuat oleh orang lain (pihak ketiga) dan bisa dipakai di dalam aplikasi 
+		- Repository github yang berisi kumpulan library
+		  a) https://github.com/wasabeef/awesome-android-libraries 
+		  b) https://github.com/wasabeef/awesome-android-ui
+		  c) https://android-arsenal.com/
 		  
 	@ View and ViewGroup : ( https://developer.android.com/guide/topics/ui/declaring-layout )
 		- view (widget) adalah obyek yang menggambar komponen tampilan ke layar yang mana pengguna dapat melihat dan berinteraksi langsung. 
 		- viewgroup (layout) adalah sebuah objek yang mewadahi obyek-obyek view dan viewgroup itu sendiri sehingga membentuk satu kesatuan tampilan aplikasi yang utuh. 
+		
+5. Debugging : 
+	- untuk debugging selalu perhatikan logcat pada bagian bahwa editor saat menjalankan aplikasi u/ mengetahui penyebabnya		
+	- Bug yg menyebabkan forse close :
+	  a) Java Null Pointer Exception
+	  b) Java Out of Memory Exception
+	  c) Java Index Out Of Bound
+	  d) Java Memory Leak
+	- Bug yang menyebabkan Not Responding = Android akan menganggap sebuah aplikasi sebagai not responding bila proses yang berjalan di main thread tidak selesai dalam waktu 5 detik
+	- Bug yang disebabkan oleh kesalahan logika = bug yang berbahaya karena akan membuat aplikasi tidak sesuai apa yg diinginkan, walaupun tidak terjadi crash
+	- Bisa juga memanfaatkan fitur bawaan android studio yaitu gambar BUG  / tekan shift + f9
+	- Tool untuk memantau Bug  = https://firebase.google.com/docs/crashlytics/get-started?platform=android&utm_source=fabric&utm_medium=inline_banner&utm_campaign=fabric_sunset&utm_content=kits_crashlytics
+	- forum untuk diskusi = https://www.dicoding.com/blog/android-studio-aplikasi-error-apa-yang-harus-dilakukan/
+	- Selain Debugging , ada juga istilah LOGGING yang artinya suatu cara untuk mempresentasikan keadaan ( testing ), terhadap aplikasi untuk melihat apa yang terjadi / mencari kesalahan
+		
+		
+6. Testing :
+	- Tipe Testing ada 3 :
+	  a) Local unit tests, Terletak pada direktori module-name/src/test/java/. = Tes ini berjalan pada local JVM dan tidak mempunyai akses ke API Android Framework. Biasanya untuk menguji sebuah method / fungsi berjalan sesuai rencana.
+	  b) Instrument Test , Terletak pada direktori module-name/src/androidTest/java/. = Tes ini harus berjalan pada peranti Android atau emulator. Digunakan untuk memvalidasi proses interaksi pada User Interface (UI) berjalan dengan lancar
+	  c) end to end test , Tes ini seperti Instrumented test, hanya proses yang dilakukan lebih lengkap dari awal sampai akhir, 
+	-
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

@@ -13,6 +13,7 @@ import com.example.TestApp.intent.MoveActivity
 import com.example.TestApp.intent.MoveForResultActivity
 import com.example.TestApp.intent.MoveWithDataActivity
 import com.example.TestApp.intent.MoveWithObjectActivity
+import com.example.TestApp.listView.ListViewActivity
 import com.example.TestApp.model.Person
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -34,12 +35,12 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         /* INTRO  */
-        tv_intro.text = """
-            INTRO 
+        tv_intro_content.text = """
         This is an App made by me
-        Very Fucking Simple cause....
+        Very Fucking Simple UI, cause....
         I don't give a shit about layout
         """.trimIndent()
+        
         //intent activity
         val btnMoveActivity: Button = findViewById(R.id.btn_move_activity)
         btnMoveActivity.setOnClickListener(this)
@@ -53,12 +54,16 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         btnMoveWithObjectActivity.setOnClickListener(this)
         val btnMoveForResult:Button = findViewById(R.id.btn_move_for_result)
         btnMoveForResult.setOnClickListener(this)
-
         tvResult= findViewById(R.id.tv_result)
         //fragment
         val btnMoveToFragment: Button = findViewById(R.id.btn_move_to_fragment)
         btnMoveToFragment.setOnClickListener(this)
-
+        //ListView
+        val btnMoveToListView: Button = findViewById(R.id.btn_move_to_listView)
+        btnMoveToListView.setOnClickListener(this)
+        //DebugActivity
+        val btnMoveToDebugActivity: Button = findViewById(R.id.btn_move_to_debug_activity)
+        btnMoveToDebugActivity.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -111,6 +116,14 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             R.id.btn_move_to_fragment -> {
                 val moveToFragment = Intent(this@MainActivity, FlexibleFragment::class.java)
                 startActivity(moveToFragment)
+            }
+            R.id.btn_move_to_listView -> {
+                val moveToListView = Intent(this@MainActivity, ListViewActivity::class.java)
+                startActivity(moveToListView)
+            }
+            R.id.btn_move_to_debug_activity -> {
+                val moveToDebugActivity = Intent(this@MainActivity, DebugActivity::class.java)
+                startActivity(moveToDebugActivity)
             }
         }
     }
