@@ -1,7 +1,9 @@
 													FUNDAMENTAL ANDROID
 													
-	Cara untuk membaca dokmentasi = https://developer.android.com/docs / ctrl + Q pada android studio untuk membaca dokumentasi												
-	progress belajar : https://www.dicoding.com/academies/14/tutorials/1063?from=572												
+	Cara untuk membaca dokmentasi = https://developer.android.com/docs / ctrl + Q pada android studio untuk membaca dokumentasi	
+	ShortCut untuk autocomplication method bawaan Android = ctrl(hold) + space and choice the method											
+	progress belajar : https://www.dicoding.com/academies/14/tutorials/270?from=269		
+	progress belajar : ##########_________________________________________ 20%							
 
 *	Komponen dasar yang digunakan untuk membuat aplikasi android :
 	- Activity = adalah hal yang menangani window (tampilan) yang akan ditampilkan di interface, dan activity memiliki life cycle bawaan android
@@ -35,7 +37,7 @@
 	  a) Context menggunakan getActivity/activity, bukan this@MainActivity/MainActivity.this
 	  b) Pemanggilan id menggunakan view.findFiewById, bukan findFiewById
 	  
-4. Widget (komponen tampilan UI and UX ) :
+4. Widget And Layout (komponen tampilan UI and UX ) : ( https://www.uplabs.com/ dan https://www.uplabs.com/android ) untuk resource UI and UX
 
 	@ ListView
 		- langkah untuk menerapkan listview : ( https://developer.android.com/reference/android/widget/Adapter	 )
@@ -53,8 +55,64 @@
 		  c) https://android-arsenal.com/
 		  
 	@ View and ViewGroup : ( https://developer.android.com/guide/topics/ui/declaring-layout )
-		- view (widget) adalah obyek yang menggambar komponen tampilan ke layar yang mana pengguna dapat melihat dan berinteraksi langsung. 
-		- viewgroup (layout) adalah sebuah objek yang mewadahi obyek-obyek view dan viewgroup itu sendiri sehingga membentuk satu kesatuan tampilan aplikasi yang utuh. 
+		- view (widget) adalah obyek yang menggambar komponen tampilan ke layar yang mana pengguna dapat melihat dan berinteraksi langsung. komponen turunan view :
+		  a) TextView
+		  b) ImageView
+		  c) RadioGroup->RadioButton
+		  d) ListView
+		  e) GridView
+		  f) ScrollView
+		  f) CheckBox
+		- viewgroup (layout) adalah sebuah objek yang mewadahi obyek-obyek view dan viewgroup itu sendiri sehingga membentuk satu kesatuan tampilan aplikasi yang utuh. komponen turunan viewGroup :
+		  a) LinearLayout = Akan menempatkan komponen-komponen di dalamnya secara horizontal atau vertikal
+		  b) RelativeLayout
+		  c)	FrameLayout
+		  d) ConstraintLayout = Pembahasan ada bawah
+		  e) TableLayout
+		- Constraint Layout : ( https://developer.android.com/reference/android/support/constraint/ConstraintLayout )
+		  Ketika Anda menggunakan constraint layout, hasil dari text editor menjadikan berkas layout tersebut menjadi lebih banyak, berbeda dengan Layout lain, adapun bagian dari constraintLayout :
+		  a) RelativPositioning = salah satu dasar pembuatan tata letak di constraintlayout. Relative Positioning memungkinkan Anda untuk memposisikan widget secara relatif terhadap widget yang lain.
+		  b) Margins = terdapat juga margin di constraint
+		  c) Centering Positioning and Bias = untuk memindahkan posisi sesuai dengan keinginan Anda.
+	
+	@ Style and Theme : ( https://developer.android.com/design/index.html )
+		- style
+		  a) Style merupakan sebuah kumpulan properti yang dibutuhkan untuk mendefinisikan bagaimana sebuah komponen view dan layar jendela (bisa activity maupun fragment) ditampilkan
+		  b) location: res →  values  →  styles.xml.
+		  c) Contoh properti ini adalah height, width, background_color.
+		- Theme
+		  a) Theme atau tema itu sendiri merupakan sebuah style yang diterapkan khusus untuk activity dan application pada berkas AndroidManifest.xml
+		  b) location : res →  values  →  styles.xml. dan res →  values  →  colors.xml 
+		
+	@ RecycleView : ( https://developer.android.com/reference/android/support/v7/widget/RecyclerView.html )
+		- ini adalah versi update dari ListView
+		- Recycle view memiliki 3 komponen :
+		  |			|			|	  	|			|		|
+		  | RecycleView 	|	------>	| Adapter	|	------>	| Dataset	| + Item Animator
+		  |LayoutManager	|			|__________|			| ________	|
+		  |_____________|
+		  a) RecyclerView = Komponen antarmuka yang bertugas untuk menampilkan data set yang dimiliki di dalamnya. 
+		     LayoutManager = akan mengatur posisi tampilan data baik itu secara list (vertikal), grid (baris dan kolom) atau staggeredgrid (grid yang memiliki susunan tak seragam / tak beraturan)
+		  b) Adapter = Komponen yang akan mengatur bagaimana menampilkan data set ke dalam RecyclerView. 
+		  c) Dataset = Kumpulan data yang dimiliki dan ingin ditampilkan. Bisa berupa array, list maupun obyek map.
+		  d) ItemAnimator = untuk menambahkan animasi pada setiap itemnya
+		  
+	@ CustomView : ( https://developer.android.com/guide/topics/ui/custom-components = doc about custom view ) 
+			    ( https://codelabs.developers.google.com/codelabs/advanced-android-training-custom-view-from-scratch/index.html?#0 = best practice from google )
+		- bisa memberi ide mengenai kontrol apa saja yang bisa Anda berikan kepada CustomView yang Anda buat
+	
+	@ ActionBar and Navigation
+		- Pada modul action bar dan navigation, kita akan belajar tentang action bar dan navigation drawer di dalam aplikasi Android
+	
+	@ Localozation
+		- Untuk menambah jumlah pengguna dari aplikasi, tentunya kita perlu merangkul lebih banyak pengguna, baik dari dalam maupun luar negeri.
+	
+	@ Satuan Dimensi Android
+		- dp (density pixel) adalah satuan untuk menentukan ukuran komponen non-text, ini adalah satuan yang lebih kompetibel bagi semua device dibanding dengan menggunakan px
+		- sp (scale pixel) adalah satuan untuk menentukan ukuran komponen text 
+		- docummentation untuk satuan dimensi android :
+		  a) https://developer.android.com/guide/practices/screens_support.html (multi screen support)
+		  b) https://jampasir.wordpress.com/2015/07/15/android-unit-px-pixel-dpdip-density-independent-pixel-dan-sp-scale-independent-pixels/ (about dp and sp)
 		
 5. Debugging : 
 	- untuk debugging selalu perhatikan logcat pada bagian bahwa editor saat menjalankan aplikasi u/ mengetahui penyebabnya		

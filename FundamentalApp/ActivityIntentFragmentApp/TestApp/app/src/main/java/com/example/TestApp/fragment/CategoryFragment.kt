@@ -14,7 +14,7 @@ class CategoryFragment : Fragment(), View.OnClickListener {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
+        // Inflate the layout_seller for this fragment
         return inflater.inflate(R.layout.fragment_category, container, false)
     }
 

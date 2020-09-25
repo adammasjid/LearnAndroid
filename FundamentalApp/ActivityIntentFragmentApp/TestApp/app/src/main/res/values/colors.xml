@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--    Color Primary : Warna utama, digunakan sebagai warna action bar. -->
+<!--    Color Primary Dark : Warna gelap utama, digunakan untuk warna title bar (di atasnya action bar).-->
+<!--    Color Accent : Warna aksen, biasanya digunakan sebagai warna ketiga, biasa digunakan untuk komponen Floating Action Bar, EditText serta tanda aktif pada RadioButton dan CheckBox.-->
 <resources>
-    <color name="colorPrimary">#6200EE</color>
-    <color name="colorPrimaryDark">#3700B3</color>
-    <color name="colorAccent">#03DAC5</color>
+    <color name="colorPrimary">#607D8B</color>
+    <color name="colorPrimaryDark">#455A64</color>
+    <color name="colorAccent">#FF5722</color>
+    <color name="colorSubTitle">#757575</color>>
+    <color name="colorAccentSecondary">#FF8FAF</color>
 </resources>

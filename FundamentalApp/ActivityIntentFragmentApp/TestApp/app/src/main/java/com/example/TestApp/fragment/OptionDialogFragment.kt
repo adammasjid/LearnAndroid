@@ -17,7 +17,7 @@ class OptionDialogFragment : DialogFragment(), View.OnClickListener {
                           // inherit with DialogFragment() untuk
     /**
      * @DialogFragment()
-     * Saat menggunakan [DialogFragment] Dengan begitu obyek fragment sekarang merupakan obyek dialog yang akan tampil mengambang di layout.
+     * Saat menggunakan [DialogFragment] Dengan begitu obyek fragment sekarang merupakan obyek dialog yang akan tampil mengambang di layout_seller.
      * Seperti pada obyek modal pada platform lain, obyek DialogFragment dapat disesuaikan tampilan dan fungsinya secara spesifik.
      * Di sini kita menampillkan sebuah dialog ke pengguna untuk memilih sebuah opsi yang tersedia
      */

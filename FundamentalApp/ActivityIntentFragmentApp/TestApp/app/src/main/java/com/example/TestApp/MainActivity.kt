@@ -8,6 +8,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
+import com.example.TestApp.customView.MyCustomView
 import com.example.TestApp.fragment.FlexibleFragment
 import com.example.TestApp.intent.MoveActivity
 import com.example.TestApp.intent.MoveForResultActivity
@@ -15,6 +16,9 @@ import com.example.TestApp.intent.MoveWithDataActivity
 import com.example.TestApp.intent.MoveWithObjectActivity
 import com.example.TestApp.listView.ListViewActivity
 import com.example.TestApp.model.Person
+import com.example.TestApp.recycleView.MyRecycleView
+import com.example.TestApp.viewAndViews.MyConstraintView
+import com.example.TestApp.viewAndViews.MyViewAndViews
 import kotlinx.android.synthetic.main.activity_main.*
 
 /**
@@ -37,10 +41,15 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         /* INTRO  */
         tv_intro_content.text = """
         This is an App made by me
-        Very Fucking Simple UI, cause....
-        I don't give a shit about layout
-        """.trimIndent()
+        Very Super Simple UI, cause....
+        I don't give a shit about layout_seller
         
+        Click The Fucking Button for Move Activity
+        """.trimIndent()
+
+        //Note Activity
+        val btnNotesActivity: Button = findViewById(R.id.btn_move_note_activity)
+        btnNotesActivity.setOnClickListener(this)
         //intent activity
         val btnMoveActivity: Button = findViewById(R.id.btn_move_activity)
         btnMoveActivity.setOnClickListener(this)
@@ -64,10 +73,25 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         //DebugActivity
         val btnMoveToDebugActivity: Button = findViewById(R.id.btn_move_to_debug_activity)
         btnMoveToDebugActivity.setOnClickListener(this)
+        //View&ViewGroup
+        val btnMoveToViewNViewsActivity: Button = findViewById(R.id.btn_move_to_view_and_views)
+        btnMoveToViewNViewsActivity.setOnClickListener(this)
+        val btnMoveToConstraintView: Button = findViewById(R.id.btn_move_to_constraint_layout)
+        btnMoveToConstraintView.setOnClickListener(this)
+        // Custom View
+        val btnMoveToCustomView: Button = findViewById(R.id.btn_move_to_custom_view)
+        btnMoveToCustomView.setOnClickListener(this)
+        // Recycle View
+        val btnMoveToRecycleView: Button = findViewById(R.id.btn_move_to_recycle_view)
+        btnMoveToRecycleView.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
         when (v?.id) { // .id == getId() on java
+            R.id.btn_move_note_activity -> {
+                val moveToNotesActivity = Intent(this@MainActivity, NotesActivity::class.java)
+                startActivity(moveToNotesActivity)
+            }
             R.id.btn_move_activity -> {
                 val moveIntent = Intent(this@MainActivity, MoveActivity::class.java)
                 startActivity(moveIntent)
@@ -124,6 +148,22 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             R.id.btn_move_to_debug_activity -> {
                 val moveToDebugActivity = Intent(this@MainActivity, DebugActivity::class.java)
                 startActivity(moveToDebugActivity)
+            }
+            R.id.btn_move_to_view_and_views -> {
+                val moveToViewNViewsActivity = Intent(this@MainActivity, MyViewAndViews::class.java)
+                startActivity(moveToViewNViewsActivity)
+            }
+            R.id.btn_move_to_constraint_layout -> {
+                val moveToConstraintView = Intent (this@MainActivity, MyConstraintView::class.java)
+                startActivity(moveToConstraintView)
+            }
+            R.id.btn_move_to_custom_view -> {
+                val moveToCustomView = Intent (this@MainActivity, MyCustomView::class.java)
+                startActivity(moveToCustomView)
+            }
+            R.id.btn_move_to_recycle_view -> {
+                val moveToRecycleView = Intent (this@MainActivity, MyRecycleView::class.java)
+                startActivity(moveToRecycleView)
             }
         }
     }

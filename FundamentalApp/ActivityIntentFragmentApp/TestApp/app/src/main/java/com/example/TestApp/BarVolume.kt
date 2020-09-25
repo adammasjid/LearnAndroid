@@ -33,7 +33,7 @@ class BarVolume : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        // for set layout
+        // for set layout_seller
         setContentView(R.layout.activity_bar_volume)
 
         edtWidth = findViewById(R.id.edt_width)

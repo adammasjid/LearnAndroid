@@ -1,6 +1,9 @@
 <resources>
+
+    <!-- TODO: Below Intent Resource-->
     <string name="app_name">TestApp</string>
     <string name="intro"> INTRO </string>
+    <string name="hyperlink">https://github.com/adammasjid/LearnKotlin/blob/master/FundamentalApp/NOTE.txt</string>
     <string name="move_activity">Pindah Activity</string>
     <string name="move_with_data">Pindah Activity dengan Data</string>
     <string name="move_with_object">Pindah Activity dengan Object</string>
@@ -13,7 +16,7 @@
     <string name="width">Lebar</string>
     <string name="height">Tinggi</string>
     <string name="calculate">Hitung</string>
-    <string name="result">Hasil</string>
+    <string name="result">Hasil Dari Move With Result</string>
     <string name="choose_number">choose_number</string>
     <string name="_50">50</string>
     <string name="_100">100</string>
@@ -41,8 +44,15 @@
     <string name="david_moyes">David Moyes</string>
     <string name="close">Tutup</string>
 
-    <!-- TODO: Below is string resource of ListView  -->
+    <!-- TODO: Below is string resource of ListView and RecycleView -->
     <string name="listView">List View</string>
+    <string name="heroes_name">Nama Pahlawan</string>
+    <string name="description">Deskripsi</string>
+    <string name="list">List</string>
+    <string name="grid">Grid</string>
+    <string name="with_cardview">with CardView</string>
+    <string name="favorite">Favorite</string>
+    <string name="share">Share</string>
     <string name="title_activity_my_list_view">MyListView</string>
     <string name="name_heroes">Nama Pahlawan</string>
     <string name="lorem">lorem ipsum dolor sit amet</string>
@@ -82,14 +92,32 @@
         <item>@drawable/supomo</item>
         <item>@drawable/tan_malaka</item>
     </array>
-    <!--
-    This string is used for square devices and overridden by hello_world in
-    values-round/strings.xml for round devices.
-    -->
 
-<!--    DebugActivity Resource-->
+    <!-- TODO: Below DebugActivity Resource-->
     <string name="debugActivity">Debugging Activity</string>
     <string name="set_value">Set Nilai</string>
     <string name="hello_world">Hello World!</string>
+    <string name="todo2">TODO</string>
+
+    <!-- TODO: Below View&ViewGroup Resource-->
+    <string name="content_text">Google officially announced its much-anticipated Pixel phones; the Pixel and Pixel XL, on October 4. We attended Google’s London UK event, mirroring the main one taking place in San Francisco, US, where the firm unwrapped the new Android 7.1 Nougat devices which will apparently usurp Google’s long-standing Nexus series.</string>
+    <string name="content_specs_display">5.0 inches\nFHD AMOLED at 441ppi\n2.5D Corning® Gorilla® Glass 4</string>
+    <string name="content_specs_size">5.6 x 2.7 x 0.2 ~ 0.3 inches 143.8 x 69.5 x 7.3 ~ 8.5 mm</string>
+    <string name="content_specs_battery">2,770 mAh battery\nStandby time (LTE): up to 19 days\nTalk time (3g/WCDMA): up to 26 hours\nInternet use time (Wi-Fi): up to 13 hours\nInternet use time (LTE): up to 13 hours\nVideo playback: up to 13 hours\nAudio playback (via headset): up to 110 hours\nFast charging: up to 7 hours of use from only 15 minutes of charging</string>
+    <string name="specs">Spesifikasi</string>
+    <string name="display">Display</string>
+    <string name="size">Size</string>
+    <string name="stock">Stock hanya 5 buah</string>
+    <string name="_735">$735</string>
+    <string name="_6_photos">6 Photos</string>
+    <string name="battery">Battery</string>
+    <string name="dijual_oleh">Dijual oleh</string>
+    <string name="name">Adam</string>
+    <string name="beli">Beli</string>
+    <string name="viewNviews">View And Views Activity</string>
     <string name="todo">TODO</string>
+    <string name="constraint_layout">Constraint Layout Activity</string>
+    <string name="custom_view">Custom View Activity</string>
+    <string name="recycle_view">Recycle View Activity</string>
+
 </resources>

@@ -3,12 +3,15 @@
     <words>
       <w>adalah</w>
       <w>akan</w>
+      <w>aksen</w>
       <w>aksi</w>
+      <w>aktif</w>
       <w>anda</w>
       <w>anotasi</w>
       <w>antar</w>
       <w>antara</w>
       <w>antarmuka</w>
+      <w>atasnya</w>
       <w>atau</w>
       <w>baik</w>
       <w>banyak</w>
@@ -24,14 +27,18 @@
       <w>berbeda</w>
       <w>berfungsi</w>
       <w>berisi</w>
+      <w>berkonsep</w>
       <w>berparamenter</w>
       <w>bersarang</w>
       <w>berubah</w>
       <w>berupa</w>
       <w>biasa</w>
+      <w>biasanya</w>
       <w>bisa</w>
       <w>bukan</w>
+      <w>cukup</w>
       <w>dalam</w>
+      <w>dalamnya</w>
       <w>dapat</w>
       <w>demi</w>
       <w>dengan</w>
@@ -39,46 +46,63 @@
       <w>dibawah</w>
       <w>dibebaskan</w>
       <w>dibuat</w>
+      <w>dibutuhkan</w>
       <w>didalam</w>
       <w>didefinisikan</w>
       <w>dieksekusi</w>
       <w>digunakan</w>
+      <w>diinisialisasi</w>
       <w>dijalankan</w>
+      <w>dikeluarkan</w>
+      <w>dilakukan</w>
       <w>diluar</w>
       <w>dipanggil</w>
       <w>diperlukan</w>
       <w>diproses</w>
       <w>disebut</w>
       <w>disesuaikan</w>
+      <w>disini</w>
       <w>ditampilkan</w>
+      <w>ditampung</w>
       <w>ditangkap</w>
       <w>ditankap</w>
       <w>ditransformasikan</w>
       <w>framelayout</w>
       <w>fungsi</w>
       <w>fungsinya</w>
+      <w>gelap</w>
       <w>gunakan</w>
       <w>gunakanlah</w>
       <w>halaman</w>
+      <w>hanya</w>
+      <w>harus</w>
       <w>hasil</w>
       <w>imageview</w>
+      <w>informasi</w>
       <w>inisialisasi</w>
       <w>inisiasi</w>
       <w>jadi</w>
       <w>jika</w>
       <w>juga</w>
       <w>kategori</w>
+      <w>kedalam</w>
       <w>kelas</w>
       <w>kembali</w>
       <w>kemungkinan</w>
+      <w>kepada</w>
+      <w>ketiga</w>
       <w>ketika</w>
       <w>kita</w>
+      <w>klik</w>
       <w>kode</w>
       <w>kombinasi</w>
+      <w>komponen</w>
       <w>komponennya</w>
       <w>kondisi</w>
       <w>konsep</w>
+      <w>konstruktor</w>
       <w>lebih</w>
+      <w>lihat</w>
       <w>maka</w>
       <w>mana</w>
       <w>manipulasi</w>
@@ -89,7 +113,9 @@
       <w>memangkas</w>
       <w>memasukan</w>
       <w>memberi</w>
+      <w>memerlukan</w>
       <w>memilih</w>
+      <w>memiliki</w>
       <w>memulai</w>
       <w>menambahkan</w>
       <w>menampilkan</w>
@@ -97,8 +123,10 @@
       <w>mendapatkan</w>
       <w>mendapatkannya</w>
       <w>menekan</w>
+      <w>menerapkan</w>
       <w>mengambang</w>
       <w>mengatur</w>
+      <w>mengcustom</w>
       <w>mengeksekusi</w>
       <w>mengetahui</w>
       <w>menggunakan</w>
@@ -106,7 +134,10 @@
       <w>mengirim</w>
       <w>mengorganisir</w>
       <w>mengubah</w>
+      <w>menjadi</w>
+      <w>menjadikan</w>
       <w>menjalankan</w>
+      <w>menumpuk</w>
       <w>menyimpan</w>
       <w>menyipakan</w>
       <w>merespon</w>
@@ -129,12 +160,14 @@
       <w>pemasangan</w>
       <w>penambahan</w>
       <w>penentuan</w>
+      <w>pengecekan</w>
       <w>pengguna</w>
       <w>penggunaan</w>
       <w>penjelasan</w>
       <w>penyesuaian</w>
       <w>performa</w>
       <w>pergantian</w>
+      <w>pertama</w>
       <w>perubahan</w>
       <w>pilih</w>
       <w>pilihan</w>
@@ -153,6 +186,7 @@
       <w>selalu</w>
       <w>sempurna</w>
       <w>seperti</w>
+      <w>serta</w>
       <w>sesuai</w>
       <w>setelah</w>
       <w>setiap</w>
@@ -160,13 +194,16 @@
       <w>sinilah</w>
       <w>skenario</w>
       <w>spesifik</w>
+      <w>spesifikasi</w>
       <w>sudah</w>
       <w>tambahkan</w>
       <w>tampil</w>
       <w>tampilan</w>
+      <w>tanda</w>
       <w>tapi</w>
       <w>telah</w>
       <w>tepat</w>
+      <w>terbentuk</w>
       <w>terdaftar</w>
       <w>terdapat</w>
       <w>terdari</w>
@@ -178,7 +215,11 @@
       <w>tidak</w>
       <w>tombol</w>
       <w>transaksi</w>
+      <w>ukuran</w>
       <w>untuk</w>
+      <w>utama</w>
+      <w>viewgroup</w>
+      <w>warna</w>
       <w>yaitu</w>
       <w>yakni</w>
     </words>

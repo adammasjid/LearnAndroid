@@ -26,7 +26,7 @@ class FlexibleFragment : AppCompatActivity() {
             /** cara dibawah ini disebut juga [RXOperator] **/
             mFragmentManager
                 .beginTransaction() // method ini untuk memulai proses perubahan.
-                .add(R.id.frame_container, mHomeFragment, HomeFragment::class.java.simpleName) // akan menambahkan objek fragment ke dalam layout container. Layout container ini merupakan objek framelayout dengan ID frame_container
+                .add(R.id.frame_container, mHomeFragment, HomeFragment::class.java.simpleName) // akan menambahkan objek fragment ke dalam layout_seller container. Layout container ini merupakan objek framelayout dengan ID frame_container
                 .commit() // akan mengeksekusi untuk melakukan pemasangan objek secara asynchronous untuk ditampilkan ke antar muka pengguna (user interface).
         }
     }

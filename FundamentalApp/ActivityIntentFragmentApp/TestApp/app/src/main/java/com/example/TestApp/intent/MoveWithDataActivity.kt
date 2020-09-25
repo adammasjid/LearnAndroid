@@ -24,7 +24,7 @@ class MoveWithDataActivity : AppCompatActivity() {
             Name = $name
             Age = $age
         """.trimIndent()
-        tvDataReceived.text = text // for showing the text to layout
+        tvDataReceived.text = text // for showing the text to layout_seller
         // extensions property berasal dari object xml
     }
 }

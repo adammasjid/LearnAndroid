@@ -21,7 +21,7 @@ class MoveForResultActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_move_for_result)
 
-        // catch id from layout for this class
+        // catch id from layout_seller for this class
         rgNumber = findViewById(R.id.rg_number)
 
         btnChoose = findViewById(R.id.btn_choose)

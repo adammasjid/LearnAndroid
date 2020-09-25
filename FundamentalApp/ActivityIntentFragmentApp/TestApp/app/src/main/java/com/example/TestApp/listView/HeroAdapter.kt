@@ -23,7 +23,7 @@ class HeroAdapter internal constructor(private val context: Context) : BaseAdapt
     //below is method from base adapter
     /**
      * @getView
-     * digunakan untuk memanggil layout item xml yang sudah dibuat dan ...
+     * digunakan untuk memanggil layout_seller item xml yang sudah dibuat dan ...
      * melakukan proses manipulasi setiap komponennya seperti textview dan imageview melalui kelas ViewHolder.
      */
     override fun getView(position: Int, view: View?, viewGroup: ViewGroup): View {
@@ -40,7 +40,7 @@ class HeroAdapter internal constructor(private val context: Context) : BaseAdapt
         viewHolder.bind(hero)
         return itemView
     }
-    // dibawah adalah inner class untuk casting object pada layout
+    // dibawah adalah inner class untuk casting object pada layout_seller
      private inner class ViewHolder constructor(private val view: View) {
         fun bind(hero: Hero) {
             // ini menggunakan kotlin android extension
