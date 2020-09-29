@@ -41,12 +41,13 @@
         android:layout_height="wrap_content"
         android:id="@+id/btn_caclculate"
         android:text="@string/calculate"/>
+
     <TextView
+        android:id="@+id/tv_result_volume"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/tv_result"
         android:gravity="center"
+        android:text="Hasil"
         android:textSize="24sp"
-        android:textStyle="bold"
-        android:text="@string/result"/>
+        android:textStyle="bold" />
 </LinearLayout>

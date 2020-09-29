@@ -5,12 +5,15 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Toast
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.TestApp.R
 import com.example.TestApp.model.Hero
 import kotlinx.android.synthetic.main.activity_my_recycle_view.*
 import kotlinx.android.synthetic.main.item_cardview_hero.*
+
+// TODO : PENJELASAN LENGKAP TENTANG ADAPTER BISA DI CHECK DI CLASS ListHeroAdapter
 
 class MyRecycleView : AppCompatActivity() {
 
@@ -23,12 +26,18 @@ class MyRecycleView : AppCompatActivity() {
         private const val STATE_MODE = "state_mode"
     }
 
+    // below is function user defined for set the title of action bar
+    private fun setActionBarTitle(name: String?) {
+        supportActionBar?.title = name
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_my_recycle_view)
 
-        rv_heroes.setHasFixedSize(true)
+        rv_heroes.setHasFixedSize(true) // bila fixed size bernilai true, maka recyclerview dapat melakukan optimasi ukuran lebar dan tinggi secara otomatis.
 
+        // below is algorithm for save data if orientation display changed
         if (savedInstanceState == null ) {
             list.addAll(getListHeroes())
             showRecyclerList()
@@ -53,6 +62,7 @@ class MyRecycleView : AppCompatActivity() {
         outState.putInt(STATE_MODE ,mode)
     }
 
+
     @SuppressLint("Recycle")
     fun getListHeroes(): ArrayList<Hero> {
         val dataPhoto = resources.obtainTypedArray(R.array.data_photo)
@@ -70,16 +80,34 @@ class MyRecycleView : AppCompatActivity() {
         return list
     }
 
+    // below is function user-Defined
+    private fun showSelectedHero(hero: Hero) {
+        Toast.makeText(this, "Kamu memilih ${hero.name}", Toast.LENGTH_SHORT).show()
+    }
+
     private fun showRecyclerList() {
+        // LayoutManager untuk menentukan bagaimana layout ditampilkan
         rv_heroes.layoutManager = LinearLayoutManager(this)
         val listHeroAdapter = ListHeroAdapter(list) // parameter yang ber type data harus ditampung kedalam property
         rv_heroes.adapter = listHeroAdapter
+
+        listHeroAdapter.setOnItemClickCallback(object: ListHeroAdapter.OnItemClickCallback {
+            override fun onItemClicked(data: Hero) {
+                showSelectedHero(data)
+            }
+        })
     }
 
     private fun showRecyclerGrid() {
         rv_heroes.layoutManager = GridLayoutManager(this,2)
         val gridHeroAdapter = GridHeroAdapter(list)
         rv_heroes.adapter = gridHeroAdapter
+
+        gridHeroAdapter.setOnItemClickCallback(object :GridHeroAdapter.OnItemClickCallback {
+            override fun onItemClicked(hero: Hero) {
+                showSelectedHero(hero)
+            }
+        })
     }
 
     private fun showRecyclerCardView() {
@@ -88,20 +116,19 @@ class MyRecycleView : AppCompatActivity() {
         rv_heroes.adapter = cardViewHeroAdapter
     }
 
+    //below is method from AppCompatActivity for showing the menu main in this case
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        menuInflater.inflate(R.menu.menu_main, menu)
+        menuInflater.inflate(R.menu.menu_main, menu) // casting layout menu
         return super.onCreateOptionsMenu(menu)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         setMode(item.itemId)
         return super.onOptionsItemSelected(item)
-    }
-
-    private fun setActionBarTitle(name: String?) {
-        supportActionBar?.title = name
-    }
-
+    }//                 |
+//                      |
+//                      V
+    // below is function which dependency with fun onCreateOptionsMenu
     private fun setMode(selectedMode: Int) {
         when (selectedMode) {
             R.id.action_list -> {

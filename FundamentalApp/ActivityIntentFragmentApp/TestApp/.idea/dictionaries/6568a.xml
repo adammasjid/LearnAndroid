@@ -7,12 +7,18 @@
       <w>aksi</w>
       <w>aktif</w>
       <w>anda</w>
+      <w>animasi</w>
       <w>anotasi</w>
       <w>antar</w>
       <w>antara</w>
       <w>antarmuka</w>
+      <w>apakah</w>
+      <w>aplikasi</w>
+      <w>atas</w>
       <w>atasnya</w>
       <w>atau</w>
+      <w>bagaimana</w>
+      <w>bahwa</w>
       <w>baik</w>
       <w>banyak</w>
       <w>baris</w>
@@ -28,20 +34,26 @@
       <w>berfungsi</w>
       <w>berisi</w>
       <w>berkonsep</w>
+      <w>bermakna</w>
+      <w>bernilai</w>
       <w>berparamenter</w>
+      <w>berpindah</w>
       <w>bersarang</w>
       <w>berubah</w>
       <w>berupa</w>
       <w>biasa</w>
       <w>biasanya</w>
+      <w>bila</w>
       <w>bisa</w>
       <w>bukan</w>
+      <w>contohnya</w>
       <w>cukup</w>
       <w>dalam</w>
       <w>dalamnya</w>
       <w>dapat</w>
       <w>demi</w>
       <w>dengan</w>
+      <w>detik</w>
       <w>diatas</w>
       <w>dibawah</w>
       <w>dibebaskan</w>
@@ -53,6 +65,8 @@
       <w>digunakan</w>
       <w>diinisialisasi</w>
       <w>dijalankan</w>
+      <w>dijalankannya</w>
+      <w>dikategorikan</w>
       <w>dikeluarkan</w>
       <w>dilakukan</w>
       <w>diluar</w>
@@ -66,10 +80,12 @@
       <w>ditampung</w>
       <w>ditangkap</w>
       <w>ditankap</w>
+      <w>ditentukan</w>
       <w>ditransformasikan</w>
       <w>framelayout</w>
       <w>fungsi</w>
       <w>fungsinya</w>
+      <w>gambar</w>
       <w>gelap</w>
       <w>gunakan</w>
       <w>gunakanlah</w>
@@ -77,6 +93,7 @@
       <w>hanya</w>
       <w>harus</w>
       <w>hasil</w>
+      <w>hendak</w>
       <w>imageview</w>
       <w>informasi</w>
       <w>inisialisasi</w>
@@ -84,9 +101,12 @@
       <w>jadi</w>
       <w>jika</w>
       <w>juga</w>
+      <w>jumlah</w>
+      <w>kanan</w>
       <w>kategori</w>
       <w>kedalam</w>
       <w>kelas</w>
+      <w>keluar</w>
       <w>kembali</w>
       <w>kemungkinan</w>
       <w>kepada</w>
@@ -95,34 +115,48 @@
       <w>kita</w>
       <w>klik</w>
       <w>kode</w>
+      <w>koleksi</w>
+      <w>kolom</w>
       <w>kombinasi</w>
       <w>komponen</w>
       <w>komponennya</w>
       <w>kondisi</w>
       <w>konsep</w>
       <w>konstruktor</w>
+      <w>lebar</w>
       <w>lebih</w>
+      <w>lengkap</w>
       <w>lihat</w>
+      <w>mahal</w>
       <w>maka</w>
       <w>mana</w>
       <w>manipulasi</w>
+      <w>masuk</w>
       <w>melakukan</w>
       <w>melalui</w>
       <w>memanfaatkan</w>
       <w>memanggil</w>
       <w>memangkas</w>
+      <w>memanipulasi</w>
       <w>memasukan</w>
+      <w>memasukkan</w>
       <w>memberi</w>
+      <w>membuat</w>
+      <w>memeriksa</w>
       <w>memerlukan</w>
       <w>memilih</w>
       <w>memiliki</w>
+      <w>memori</w>
+      <w>mempertahankan</w>
       <w>memulai</w>
       <w>menambahkan</w>
       <w>menampilkan</w>
       <w>menampillkan</w>
+      <w>menandakan</w>
       <w>mendapatkan</w>
       <w>mendapatkannya</w>
       <w>menekan</w>
+      <w>menentukan</w>
       <w>menerapkan</w>
       <w>mengambang</w>
       <w>mengatur</w>
@@ -131,13 +165,16 @@
       <w>mengetahui</w>
       <w>menggunakan</w>
       <w>menghubungkan</w>
+      <w>mengimplementasikan</w>
       <w>mengirim</w>
       <w>mengorganisir</w>
       <w>mengubah</w>
       <w>menjadi</w>
       <w>menjadikan</w>
       <w>menjalankan</w>
+      <w>menuliskan</w>
       <w>menumpuk</w>
+      <w>menyederhanakan</w>
       <w>menyimpan</w>
       <w>menyipakan</w>
       <w>merespon</w>
@@ -152,13 +189,18 @@
       <w>oleh</w>
       <w>operasi</w>
       <w>opsi</w>
+      <w>optimasi</w>
       <w>orientasi</w>
+      <w>otomatis</w>
       <w>pada</w>
       <w>pahlawan</w>
       <w>pasti</w>
+      <w>peforma</w>
       <w>pemanggilan</w>
       <w>pemasangan</w>
       <w>penambahan</w>
+      <w>penampil</w>
+      <w>pendekatan</w>
       <w>penentuan</w>
       <w>pengecekan</w>
       <w>pengguna</w>
@@ -167,12 +209,14 @@
       <w>penyesuaian</w>
       <w>performa</w>
       <w>pergantian</w>
+      <w>perlu</w>
       <w>pertama</w>
       <w>perubahan</w>
       <w>pilih</w>
       <w>pilihan</w>
       <w>posisinya</w>
       <w>produk</w>
+      <w>responsif</w>
       <w>saat</w>
       <w>salah</w>
       <w>sama</w>
@@ -181,6 +225,7 @@
       <w>sebelumnya</w>
       <w>sebuah</w>
       <w>secara</w>
+      <w>segi</w>
       <w>sekali</w>
       <w>sekarang</w>
       <w>selalu</w>
@@ -196,13 +241,18 @@
       <w>spesifik</w>
       <w>spesifikasi</w>
       <w>sudah</w>
+      <w>sumber</w>
+      <w>tambahan</w>
       <w>tambahkan</w>
       <w>tampil</w>
       <w>tampilan</w>
       <w>tanda</w>
+      <w>tanpa</w>
       <w>tapi</w>
       <w>telah</w>
+      <w>tentang</w>
       <w>tepat</w>
+      <w>terbaik</w>
       <w>terbentuk</w>
       <w>terdaftar</w>
       <w>terdapat</w>
@@ -210,15 +260,20 @@
       <w>terjadi</w>
       <w>terlihat</w>
       <w>tersedia</w>
+      <w>tertentu</w>
       <w>tertutup</w>
+      <w>tetap</w>
       <w>textview</w>
       <w>tidak</w>
+      <w>tinggi</w>
       <w>tombol</w>
       <w>transaksi</w>
+      <w>tujuan</w>
       <w>ukuran</w>
       <w>untuk</w>
       <w>utama</w>
       <w>viewgroup</w>
+      <w>waktu</w>
       <w>warna</w>
       <w>yaitu</w>
       <w>yakni</w>

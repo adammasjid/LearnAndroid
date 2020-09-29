@@ -1,0 +1,42 @@
+<resources  xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">MyNavigationDrawer</string>
+    <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
+    <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
+    <string name="nav_header_title" translatable="false">Android Studio</string>
+    <string name="nav_header_subtitle" translatable="false">android.studio@android.com</string>
+    <string name="nav_header_desc" translatable="false">Navigation header</string>
+    <string name="action_settings" translatable="false">Settings</string>
+
+    <string name="menu_home" translatable="false">Home</string>
+    <string name="menu_gallery" translatable="false">Gallery</string>
+    <string name="menu_slideshow" translatable="false">Slideshow</string>
+    <string name="menu_tools" translatable="false">Tools</string>
+    <string name="menu_share" translatable="false">Share</string>
+    <string name="menu_send" translatable="false">Send</string>
+
+    <string name="adam" translatable="false">Adam</string>
+    <string name="adam_dicoding_gmail" translatable="false">Adam@dicoding.com</string>
+    <string name="menu_cart" translatable="false">Cart</string>
+    <string name="menu_map" translatable="false">Maps</string>
+    <string name="menu_hotel" translatable="false">Hotel</string>
+    <string name="menu_subway" translatable="false">Subway</string>
+
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="this_activity" translatable="false">Ini adalah menu activity</string>
+    <string name="this_fragment" translatable="false">Ini adalah menu fragment</string>
+    <string name="search_hint" translatable="false">Masukkan kata</string>
+    <string name="search" translatable="false">Search</string>
+    <string name="menu_1" translatable="false">Menu1</string>
+    <string name="menu_2" translatable="false">Menu 2</string>
+
+    <string name="hello_world">Hello World %1$s, you have %2$d pokes from %3$s</string>
+    <string name="good_morning">Good Morning</string>
+    <plurals name="numberOfSongsAvailable">
+        <item quantity="one">%d song found.</item>
+        <item quantity="other">%d songs found.</item>
+    </plurals>
+    <string name="app_homeurl">
+       Visit us at <xliff:g id="application_homepage">https://dicoding.com</xliff:g>
+    </string>
+    <string name="change_language_settings">Change Language Settings</string>
+</resources>

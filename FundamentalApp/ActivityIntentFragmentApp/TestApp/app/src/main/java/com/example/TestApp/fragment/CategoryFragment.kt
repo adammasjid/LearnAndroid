@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import com.dicoding.picodiploma.myflexiblefragment.DetailCategoryFragment
 import com.example.TestApp.R
 
 class CategoryFragment : Fragment(), View.OnClickListener {

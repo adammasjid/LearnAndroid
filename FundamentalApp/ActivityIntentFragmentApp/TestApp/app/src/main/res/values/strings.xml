@@ -120,4 +120,10 @@
     <string name="custom_view">Custom View Activity</string>
     <string name="recycle_view">Recycle View Activity</string>
 
+    <!-- TODO: Below Navigation Fragment Resource-->
+    <string name="category_sport">Ke fragment Sport</string>
+    <string name="to_home">Ke fragment Home</string>
+    <string name="navigation_fragment_activity">NAVIGATION FRAGMENT ACTIVITY</string>
+    <string name="move_to_actionbar_and_navigation">MOVE TO ActionBar AND NAVIGATION</string>
+
 </resources>

@@ -1,9 +1,12 @@
-													FUNDAMENTAL ANDROID
+																		FUNDAMENTAL ANDROID
 													
+	<ShortCut>
 	Cara untuk membaca dokmentasi = https://developer.android.com/docs / ctrl + Q pada android studio untuk membaca dokumentasi	
-	ShortCut untuk autocomplication method bawaan Android = ctrl(hold) + space and choice the method											
-	progress belajar : https://www.dicoding.com/academies/14/tutorials/270?from=269		
-	progress belajar : ##########_________________________________________ 20%							
+	untuk autocomplication method bawaan Android = ctrl(hold) + space and choice the method
+	untuk langsung menuju ke sumber layout arahkan cursor ke code layout lalu tahan ctrl hingga berbetuk link lalu tekan
+	</ShortCut>											
+	progress belajar : https://www.dicoding.com/academies/14/tutorials/1111?from=276		
+	progress belajar : #####################______________________________ 42%							
 
 *	Komponen dasar yang digunakan untuk membuat aplikasi android :
 	- Activity = adalah hal yang menangani window (tampilan) yang akan ditampilkan di interface, dan activity memiliki life cycle bawaan android
@@ -38,6 +41,7 @@
 	  b) Pemanggilan id menggunakan view.findFiewById, bukan findFiewById
 	  
 4. Widget And Layout (komponen tampilan UI and UX ) : ( https://www.uplabs.com/ dan https://www.uplabs.com/android ) untuk resource UI and UX
+                                                      ( https://material.io/design#introduction-principles ) for design principle
 
 	@ ListView
 		- langkah untuk menerapkan listview : ( https://developer.android.com/reference/android/widget/Adapter	 )
@@ -113,7 +117,7 @@
 		- docummentation untuk satuan dimensi android :
 		  a) https://developer.android.com/guide/practices/screens_support.html (multi screen support)
 		  b) https://jampasir.wordpress.com/2015/07/15/android-unit-px-pixel-dpdip-density-independent-pixel-dan-sp-scale-independent-pixels/ (about dp and sp)
-		
+		  		
 5. Debugging : 
 	- untuk debugging selalu perhatikan logcat pada bagian bahwa editor saat menjalankan aplikasi u/ mengetahui penyebabnya		
 	- Bug yg menyebabkan forse close :
@@ -141,7 +145,51 @@
 	- Dengan demikian kita tidak perlu secara eksplisit melakukan binding ke elemen view menggunakan findViewByID() atau library lainnya.
 	- untuk mengimplementasikan kotlin extension = import kotlin.android.synthetic, diikuti dengan nama XML yang akan kita bind ke activity.
 	
+8. Navigation :
+	- adalah komponen yang digunakan untuk memepermudah berpindah halaman dan menerapkan behavior setiap halaman
+	- Sebaiknya gunakan package yang versi lama :
+	  a) in gradle.app: 
+	     apply plugin: "androidx.navigation.safeargs"
+	     implementation "android.arch.navigation:navigation-ui-ktx:1.0.0"
+    	     implementation "android.arch.navigation:navigation-fragment-ktx:1.0.0"	
+    	  b) in gradle.project: 
+    	     classpath "android.arch.navigation:navigation-safe-args-gradle-plugin:1.0.0"
+    	- dapat menerapkan behavior dari setiap action fragment dengan mudah 
+    	- dapat membuat deep link
+    	- dapat menerapakan slide animation
+    	
+9. Material Design :
+    	@ generally, Material Design Navigation ada dua jenis :
+    	  a) navigation drawer = sebuah panel yang berada di sisi kiri layar perangkat Android. Navigation drawer juga akan muncul ketika pengguna menekan ikon hamburger yang berada di sudut kiri panel action bar.
+    	     ( https://material.io/components/navigation-drawer )
+    	  b) navigation bottom = adalah sebuah baris navigasi yang memungkinkan untuk melakukan perpindahan antar tujuan navigasi dalam suatu aplikasi. 
+    	     ( https://material.io/components/bottom-navigation )
+    	     
+	@ dan ada satu material design yang jarang digunakan yaitu Tab Layout design
 	
+	@ AppBar / Action bar: ( https://developer.android.com/guide/topics/ui/look-and-feel )
+		- adalah salah satu komponen penting di dalam struktur sebuah aplikasi Android.
+		- keguanaan AppBar :
+		  a) Memberikan ruangan kepada identitas app dan juga mengindikasikan lokasi pengguna pada saat menjalankan aplikasi.
+		  b) Akses ke beberapa action penting dengan lebih mudah seperti action pencarian.
+		  c) Sebagai navigation dan switch antar view (tampilan).	
+	
+	@ Toolbar 
+		- Toolbar merupakan pengganti dari action bar yang mempunyai kontrol dan fleksibilitas lebih.
+		- beberapa fitur dari Toolbar :
+		  a) Navigation Button : Dapat berupa tombol up, navigation menu toggle, close, collapse, done, atau glyph lainnya.
+		  b) Logo Aplikasi : Dapat dimodifikasi tinggi dan panjangnya.
+		  c) Title & Subtitle : Title bisa menunjukkan di mana aplikasi sedang berada. Subtitle merupakan tambahan informasi tentang konten yang sedang diakses.
+		  d) More Custom Views : Toolbar dapat ditambah dengan beberapa child views di dalamnya.
+		  e) Action Menu : Akan berada pada sebelah kanan toolbar sesuai dengan tingkatannya yaitu frequent, important atau typical.
+
+10. Localization : ( https://developer.android.com/guide/topics/resources/localization.html )
+	- Documentation :
+	  a) https://developer.android.com/training/basics/supporting-devices/languages.html
+	  b) https://developer.android.com/guide/topics/resources/providing-resources.html
+	  c) https://developer.android.com/guide/topics/resources/string-resource.html
+	- Localization adalah upaya melokalkan konten dan resource (sumber daya) pada sebuah aplikasi agar dapat beradaptasi dengan kebutuhan budaya dan perkembangan di banyak negara yang menjadi target pasar aplikasi.
+	- Pada dasarnya semua resource yang dimiliki oleh aplikasi dapat dilokalkan. Mulai dari aset gambar atau ikon, teks, audio, mata uang, dan ukuran. Di antara semua tipe tersebut, teks merupakan yang paling krusial. 
 	
 	
 	

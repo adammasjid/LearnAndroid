@@ -22,7 +22,7 @@ class BarVolume : AppCompatActivity() {
     // state dibawah ini untuk menyimpan data pada saat terdari perubahan orientasi
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
-        outState.putString(STATE_RESULT, tv_result.text.toString())
+        outState.putString(STATE_RESULT, tv_result_volume.text.toString())
         /** penjelasan code diatas
          * @param1 = key yang dibuat dengan companion object
          * @param2 = value / hasil dari calculate
@@ -40,12 +40,12 @@ class BarVolume : AppCompatActivity() {
         edtLength = findViewById(R.id.edt_length)
         edtHeight = findViewById(R.id.edt_height)
         btnCalculate = findViewById(R.id.btn_caclculate)
-        result = findViewById(R.id.tv_result)
+        result = findViewById(R.id.tv_result_volume)
 
         //  below for show the data if changing orientation
         if (savedInstanceState != null) {
             val result = savedInstanceState.getString(STATE_RESULT)
-            tv_result.text = result
+            tv_result_volume.text = result
         }
 
         btnCalculate.setOnClickListener {
@@ -105,7 +105,7 @@ class BarVolume : AppCompatActivity() {
                 if (!isEmptyFields && !isInvalidDouble && !isZeroInput) {
                     val formatter: DecimalFormat = DecimalFormat("#.####")
                     val volume = inputWidth.toDouble() * inputLength.toDouble() * inputHeight.toDouble()
-                    tv_result.text = formatter.format(volume).toString()
+                    tv_result_volume.text = formatter.format(volume).toString()
                 }
             }
         }

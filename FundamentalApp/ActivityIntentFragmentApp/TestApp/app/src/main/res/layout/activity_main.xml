@@ -118,6 +118,12 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:text="@string/recycle_view" />
+        <Button
+            android:id="@+id/btn_move_to_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="@string/navigation_fragment_activity" />
 
     </LinearLayout>
 </ScrollView>

@@ -16,6 +16,7 @@ import com.example.TestApp.intent.MoveWithDataActivity
 import com.example.TestApp.intent.MoveWithObjectActivity
 import com.example.TestApp.listView.ListViewActivity
 import com.example.TestApp.model.Person
+import com.example.TestApp.navigation.MyNavigation
 import com.example.TestApp.recycleView.MyRecycleView
 import com.example.TestApp.viewAndViews.MyConstraintView
 import com.example.TestApp.viewAndViews.MyViewAndViews
@@ -42,7 +43,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         tv_intro_content.text = """
         This is an App made by me
         Very Super Simple UI, cause....
-        I don't give a shit about layout_seller
+        I don't give a shit about layout
         
         Click The Fucking Button for Move Activity
         """.trimIndent()
@@ -84,6 +85,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         // Recycle View
         val btnMoveToRecycleView: Button = findViewById(R.id.btn_move_to_recycle_view)
         btnMoveToRecycleView.setOnClickListener(this)
+        // Navigation fragment
+        val btnMoveToNavigationFragment: Button = findViewById(R.id.btn_move_to_navigation)
+        btnMoveToNavigationFragment.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -164,6 +168,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             R.id.btn_move_to_recycle_view -> {
                 val moveToRecycleView = Intent (this@MainActivity, MyRecycleView::class.java)
                 startActivity(moveToRecycleView)
+            }
+            R.id.btn_move_to_navigation -> {
+                val moveToNavigationFragment = Intent (this@MainActivity, MyNavigation::class.java)
+                startActivity(moveToNavigationFragment)
             }
         }
     }
