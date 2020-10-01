@@ -3,13 +3,23 @@
     <words>
       <w>adalah</w>
       <w>akan</w>
+      <w>aktif</w>
+      <w>aplikasi</w>
       <w>atas</w>
       <w>atau</w>
+      <w>bagi</w>
+      <w>bagian</w>
       <w>bahwa</w>
+      <w>bantuan</w>
       <w>beberapa</w>
       <w>bekerja</w>
       <w>belajar</w>
+      <w>belum</w>
+      <w>berapa</w>
+      <w>berdasarkan</w>
       <w>berfungsi</w>
+      <w>berhenti</w>
+      <w>berikut</w>
       <w>berjalan</w>
       <w>berkas</w>
       <w>berkomunikasi</w>
@@ -18,38 +28,61 @@
       <w>bila</w>
       <w>bisa</w>
       <w>contoh</w>
+      <w>dalam</w>
       <w>dapat</w>
+      <w>daripada</w>
       <w>dengan</w>
       <w>detik</w>
+      <w>dibawa</w>
       <w>dibawah</w>
+      <w>diberi</w>
       <w>dibuat</w>
       <w>diciptakan</w>
       <w>digunakan</w>
+      <w>diikatkan</w>
       <w>dijalankan</w>
+      <w>dijelaskan</w>
       <w>dikembalikan</w>
       <w>dikerjakan</w>
       <w>dikirim</w>
       <w>dikirimkan</w>
       <w>dilakukan</w>
+      <w>dilihat</w>
       <w>dimatikan</w>
+      <w>dipanggil</w>
       <w>diperkenalkan</w>
       <w>diperuntukkan</w>
+      <w>dirinya</w>
+      <w>disarankan</w>
       <w>disini</w>
       <w>ditambahkan</w>
       <w>ditampilkan</w>
+      <w>ditempelkan</w>
       <w>diterapkan</w>
+      <w>ditujukan</w>
       <w>efisien</w>
+      <w>eksplisit</w>
+      <w>eksternal</w>
       <w>fitur</w>
+      <w>fungsi</w>
+      <w>fungsinya</w>
       <w>generik</w>
+      <w>hanya</w>
       <w>harus</w>
       <w>hasil</w>
       <w>hasilnya</w>
+      <w>hitungan</w>
+      <w>informasi</w>
       <w>inputan</w>
+      <w>intervalnya</w>
+      <w>jadi</w>
+      <w>jarak</w>
       <w>jauh</w>
       <w>jika</w>
       <w>juga</w>
       <w>jutaan</w>
       <w>kabar</w>
+      <w>kalau</w>
       <w>kasus</w>
       <w>kekurangan</w>
       <w>kelas</w>
@@ -59,87 +92,164 @@
       <w>kerjakan</w>
       <w>ketika</w>
       <w>kita</w>
+      <w>klien</w>
+      <w>kode</w>
+      <w>komponen</w>
+      <w>kondisi</w>
+      <w>konteks</w>
       <w>lagi</w>
+      <w>lainnya</w>
+      <w>langsung</w>
+      <w>lanjut</w>
+      <w>layanan</w>
       <w>layar</w>
       <w>lebih</w>
       <w>lihat</w>
       <w>maka</w>
       <w>mampu</w>
+      <w>mana</w>
+      <w>manajemen</w>
+      <w>masalah</w>
       <w>masih</w>
+      <w>mekanisme</w>
       <w>melakukan</w>
       <w>melalui</w>
+      <w>melepaskan</w>
       <w>melihat</w>
+      <w>memanggil</w>
       <w>memantau</w>
       <w>mematikan</w>
+      <w>membawa</w>
       <w>memberhentikan</w>
       <w>memberi</w>
       <w>membuat</w>
       <w>memiliki</w>
       <w>memori</w>
+      <w>mempengaruhi</w>
       <w>mempersiapkan</w>
+      <w>memproses</w>
+      <w>mempunyai</w>
+      <w>memulai</w>
+      <w>memungkinkan</w>
       <w>menambahkan</w>
       <w>menampilkan</w>
       <w>menandakan</w>
+      <w>menargetkan</w>
+      <w>mencegah</w>
+      <w>menentukan</w>
       <w>menerima</w>
+      <w>mengakhiri</w>
       <w>mengakses</w>
+      <w>mengalami</w>
+      <w>mengatur</w>
       <w>menggunakan</w>
+      <w>menghindari</w>
+      <w>mengikat</w>
       <w>mengimplementasikan</w>
       <w>mengirimkan</w>
+      <w>mengisi</w>
+      <w>mengizinkan</w>
+      <w>mengubah</w>
       <w>mengunduh</w>
       <w>menjadi</w>
       <w>menjalankan</w>
       <w>menjanlakan</w>
+      <w>menuliskan</w>
+      <w>menyelesaikan</w>
       <w>merncarian</w>
       <w>merupakan</w>
       <w>metode</w>
+      <w>milisecond</w>
       <w>miliseconds</w>
+      <w>mulai</w>
+      <w>mundur</w>
+      <w>nilai</w>
       <w>obyek</w>
       <w>oleh</w>
+      <w>otomatis</w>
       <w>pada</w>
+      <w>pelepasan</w>
+      <w>pemanggil</w>
+      <w>pemanggilan</w>
+      <w>pembentukan</w>
+      <w>pengguna</w>
       <w>penggunaan</w>
+      <w>penghapusan</w>
       <w>pengunduhan</w>
+      <w>penjadwalan</w>
+      <w>penting</w>
       <w>perhatikan</w>
       <w>perkembangan</w>
       <w>perkembangannya</w>
+      <w>perlu</w>
       <w>perncarian</w>
+      <w>persiapan</w>
       <w>pertama</w>
       <w>pindah</w>
+      <w>prioritas</w>
+      <w>prosedur</w>
       <w>prosesnya</w>
       <w>proyek</w>
       <w>ringan</w>
+      <w>saat</w>
       <w>saja</w>
       <w>salah</w>
       <w>sama</w>
+      <w>sampai</w>
+      <w>sangat</w>
       <w>satu</w>
       <w>satuan</w>
+      <w>sebagai</w>
       <w>sebelum</w>
+      <w>sebelumnya</w>
       <w>sebuah</w>
       <w>secara</w>
       <w>sedang</w>
+      <w>sedangkan</w>
       <w>sederhana</w>
       <w>sejak</w>
+      <w>selain</w>
       <w>selama</w>
       <w>selamat</w>
       <w>selesai</w>
+      <w>sendiri</w>
+      <w>sendirinya</w>
+      <w>seperti</w>
       <w>setelah</w>
+      <w>setiap</w>
+      <w>sifatnya</w>
       <w>simulasi</w>
+      <w>sini</w>
       <w>sinilah</w>
       <w>sistem</w>
       <w>stringnya</w>
       <w>sudah</w>
       <w>sulit</w>
+      <w>telah</w>
+      <w>terakhir</w>
       <w>terdapat</w>
+      <w>terhubung</w>
+      <w>terikat</w>
+      <w>terikatnya</w>
+      <w>terisolasi</w>
       <w>terjadi</w>
+      <w>terlepas</w>
+      <w>terlihat</w>
       <w>terpanggil</w>
+      <w>terputus</w>
       <w>tersebut</w>
       <w>tetap</w>
       <w>tidak</w>
+      <w>tingkat</w>
       <w>tipe</w>
+      <w>tugasnya</w>
+      <w>turunan</w>
       <w>umum</w>
       <w>unggulan</w>
       <w>untuk</w>
       <w>versi</w>
       <w>walaupun</w>
+      <w>yakni</w>
     </words>
   </dictionary>
 </component>

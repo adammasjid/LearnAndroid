@@ -5,8 +5,8 @@
 	untuk autocompleting method bawaan Android = ctrl(hold) + space and choice the method
 	untuk langsung menuju ke sumber layout arahkan cursor ke code layout lalu tahan ctrl hingga berbetuk link lalu tekan
 	</ShortCut>											
-	progress belajar : https://www.dicoding.com/academies/14/tutorials/171?from=169		
-	progress belajar : ###############################___________________ 62%							
+	progress belajar : https://www.dicoding.com/academies/14/tutorials/181?from=179		
+	progress belajar : ##################################________________ 68%							
 
 *	Komponen dasar yang digunakan untuk membuat aplikasi android :
 	- Activity = adalah hal yang menangani window (tampilan) yang akan ditampilkan di interface, dan activity memiliki life cycle bawaan android
@@ -239,6 +239,11 @@
  	    b) Bound service = Service jenis ini merupakan tipe service yang dijalankan oleh komponen lain, Service ini akan tetap berjalan di background selama masih ada komponen lain yang mengikatnya.
  	
  	@ Receiver
+ 	  - Broadcast Receiver = broadcast receiver adalah cara sederhana untuk menindaklanjuti sebuah broadcast message yang dipancarkan oleh dirinya sendiri, aplikasi lain atau sistem Android.
+ 	  - documentation :
+ 	    a) https://developer.android.com/reference/android/content/BroadcastReceiver.html
+ 	    b) https://www.vogella.com/tutorials/AndroidBroadcastReceiver/article.html
+ 	    c) https://www.tutorialspoint.com/android/android_broadcast_receivers.htm
 	
 	
 	

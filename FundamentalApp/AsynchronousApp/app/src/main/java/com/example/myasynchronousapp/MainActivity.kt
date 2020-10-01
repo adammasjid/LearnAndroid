@@ -98,83 +98,96 @@ import java.lang.ref.WeakReference
        Result : Hasil dari proses berupa obyek string.
      */
       // code dibawah berfungsi untuk mempersiapkan asyncTask. Disini masih berjalan di main thread dan bisa digunakan untuk mengakses view.
-    class MainActivity : AppCompatActivity(), MyAsyncCallback {
+class MainActivity : AppCompatActivity(), MyAsyncCallback {
 
-        companion object {
-            private const val INPUT_STRING = "Halo Ini Demo AsyncTask!!"
-        }
+    companion object {
+        private const val INPUT_STRING = "Halo Ini Demo AsyncTask!!"
+    }
 
-        override fun onCreate(savedInstanceState: Bundle?) {
-            super.onCreate(savedInstanceState)
-            setContentView(R.layout.activity_main)
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
 
-            val demoAsync = DemoAsync(this)
-            demoAsync.execute(INPUT_STRING)
+        val demoAsync = DemoAsync(this)
+        demoAsync.execute(INPUT_STRING)
 
-            btn_move_to_service.setOnClickListener {
-                if (it.id == R.id.btn_move_to_service) {
-                    val moveToServiceActivity = Intent(this@MainActivity, ServiceActivity::class.java)
-                    startActivity(moveToServiceActivity)
-                }
-            }
-        }
-
-
-        override fun onPreExecute() {
-            tv_status.setText(R.string.status_pre)
-            tv_desc.text = INPUT_STRING
-        }
-
-        override fun onPostExecute(result: String) {
-            tv_status.setText(R.string.status_post)
-            tv_desc.text = result
-        }
-
-        private class DemoAsync(myListener: MyAsyncCallback) : AsyncTask<String, Void, String>() {
-
-            private val myListener: WeakReference<MyAsyncCallback>
-            init {
-                this.myListener = WeakReference(myListener)
-            }
-
-            companion object {
-                private val LOG_ASYNC = "DemoAsync"
-            }
-
-            override fun onPreExecute() {
-                super.onPreExecute()
-                Log.d(LOG_ASYNC, "status : onPreExecute")
-
-                val myListener = this.myListener.get()
-                myListener?.onPreExecute()
-            }
-
-            override fun doInBackground(vararg params: String?): String {
-                Log.d(LOG_ASYNC, "status : doInBackground")
-
-                var output: String? = null
-
-                try {
-                    val input = params[0]
-                    output = "$input Selamat Belajar!!"
-                    Thread.sleep(2000)
-
-                } catch (e: Exception) {
-                    e.message?.let { Log.d(LOG_ASYNC, it) }
-                }
-
-                return output.toString()
-            }
-
-            override fun onPostExecute(result: String) {
-                super.onPostExecute(result)
-                Log.d(LOG_ASYNC, "status : onPostExecute")
-
-                val myListener = this.myListener.get()
-                myListener?.onPostExecute(result)
+        btn_move_to_service.setOnClickListener {
+            if (it.id == R.id.btn_move_to_service) {
+                val moveToServiceActivity = Intent(this@MainActivity, ServiceActivity::class.java)
+                startActivity(moveToServiceActivity)
             }
         }
     }
+
+    /* textView dibawah digunakan untuk memantau AsyncTask
+    dan akan membuat obyek DemoAsync dan menjanlakan AsyncTask dengan inputan berupa obyek string. */
+    override fun onPreExecute() {
+        // Pada metode onPreExecute(), kita hanya menuliskan status onPreExecute ke dalam obyek TextView untuk....
+        // menandakan bahwa metode onPreExecute telah dijalankan.
+        tv_status.setText(R.string.status_pre)
+        tv_desc.text = INPUT_STRING
+    }
+
+    override fun onPostExecute(result: String) {
+        // metode onPostExecute() akan menampilkan hasil proses yang dilakukan di doInBackground().
+        tv_status.setText(R.string.status_post)
+        tv_desc.text = result
+    }
+
+    /* pada class DemoAsync ini kita menggunakan WeakReference
+    * WeakReference disarankan untuk menghindari memory leak yang bisa terjadi dalam AsyncTask. */
+    private class DemoAsync(myListener: MyAsyncCallback) : AsyncTask<String, Void, String>() {
+
+        private val myListener: WeakReference<MyAsyncCallback>
+        init {
+            this.myListener = WeakReference(myListener)
+        }
+
+        companion object {
+            private val LOG_ASYNC = "DemoAsync"
+        }
+
+        /* Kode dibawah berfungsi untuk mempersiapkan asyncTask. Di sini masih berjalan di main thread dan bisa digunakan untuk mengakses view.*/
+        override fun onPreExecute() {
+            super.onPreExecute()
+            Log.d(LOG_ASYNC, "status : onPreExecute")
+            // Kelas DemoAsync menggunakan WeakReference untuk mengisi status yang ada pada bagian callback tersebut.
+            // WeakReference dipanggil di bagian berikut:
+            val myListener = this.myListener.get()
+            myListener?.onPreExecute()
+            // Kode di atas akan mengirimkan informasi bahwa kelas DemoAsync sedang dalam proses onPreExecute atau ...
+            // proses persiapan. Informasi tersebut akan dikirim ke kelas MainActivity melalui myListener.onPreExecute()
+        }
+
+        /* dibawah adalah kode yang berjalan secara asynchronous */
+        override fun doInBackground(vararg params: String?): String {
+            Log.d(LOG_ASYNC, "status : doInBackground")
+
+            var output: String? = null
+
+            try {
+                val input = params[0]
+                output = "$input Selamat Belajar!!"
+                Thread.sleep(2000)
+
+            } catch (e: Exception) {
+                e.message?.let { Log.d(LOG_ASYNC, it) }
+            }
+
+            return output.toString()
+        }
+
+        /* Kode dibawah, yakni onPostExecute berjalan ketika proses doInBackground telah selesai dan...
+         akan dijalankan di main thread yang mana state/kondisi ini dapat mengakses view. */
+        override fun onPostExecute(result: String) {
+            super.onPostExecute(result)
+            Log.d(LOG_ASYNC, "status : onPostExecute")
+
+            val myListener = this.myListener.get()
+            myListener?.onPostExecute(result)
+        }
+    }
+}
 
 internal interface MyAsyncCallback {
     fun onPreExecute()

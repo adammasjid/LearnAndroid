@@ -27,6 +27,7 @@ class MyService : Service() {
     // method dibawah dijalankan setelah intent terpanggil
     override fun onStartCommand(intent: Intent, flags: Int, startId: Int): Int {
         Log.d(TAG, "Service Dijalankan: ")
+        // below, GlobalScope for making new thread running asynchronous
         GlobalScope.launch {
             delay(3000)
             stopSelf() // berfungsi untuk  memberhentikan atau mematikan MyService dari sistem Android.
