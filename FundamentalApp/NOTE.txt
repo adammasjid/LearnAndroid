@@ -5,8 +5,8 @@
 	untuk autocompleting method bawaan Android = ctrl(hold) + space and choice the method
 	untuk langsung menuju ke sumber layout arahkan cursor ke code layout lalu tahan ctrl hingga berbetuk link lalu tekan
 	</ShortCut>											
-	progress belajar : https://www.dicoding.com/academies/14/tutorials/159?from=3500		
-	progress belajar : ###########################_______________________ 54%							
+	progress belajar : https://www.dicoding.com/academies/14/tutorials/171?from=169		
+	progress belajar : ###############################___________________ 62%							
 
 *	Komponen dasar yang digunakan untuk membuat aplikasi android :
 	- Activity = adalah hal yang menangani window (tampilan) yang akan ditampilkan di interface, dan activity memiliki life cycle bawaan android
@@ -179,9 +179,9 @@
     	
 9. Material Design :
     	@ generally, Material Design Navigation ada dua jenis :
-    	  a) navigation drawer = sebuah panel yang berada di sisi kiri layar perangkat Android. Navigation drawer juga akan muncul ketika pengguna menekan ikon hamburger yang berada di sudut kiri panel action bar.
+    	  - navigation drawer = sebuah panel yang berada di sisi kiri layar perangkat Android. Navigation drawer juga akan muncul ketika pengguna menekan ikon hamburger yang berada di sudut kiri panel action bar.
     	     ( https://material.io/components/navigation-drawer )
-    	  b) navigation bottom = adalah sebuah baris navigasi yang memungkinkan untuk melakukan perpindahan antar tujuan navigasi dalam suatu aplikasi. 
+    	  - navigation bottom = adalah sebuah baris navigasi yang memungkinkan untuk melakukan perpindahan antar tujuan navigasi dalam suatu aplikasi. 
     	     ( https://material.io/components/bottom-navigation )
     	     
 	@ dan ada satu material design yang jarang digunakan yaitu Tab Layout design
@@ -220,9 +220,23 @@
 	  								id_name.contentDescription = nameVar
 	
 12. Background Process = semua proces yang berkaitan dengan data yang berjalan dibalik UI
- 	@ Threads
- 	
- 	@ Service
+ 	@ Threads: ( documentation berada di project )
+ 	  - Secara umum semua komponen aplikasi di Android berjalan pada proses dan thread yang sama. Ini disebut main thread atau ui thread. 
+ 	  - Secara default sistem Android tidak secara otomatis menciptakan thread lain untuk menjalankan proses secara spesifik, tapi thread lain bisa dibuat dengan kebutuhan tertentu
+ 	  - aturan untuk async task :
+ 	    a) Jangan memblok uithread atau main thread. Ini berarti kita harus menciptakan background thread atau async task yang bersifat asynchronous.
+ 	    b) Jangan melakukan pemanggilan komponen ui widget (seperti textview, button, imageview dsb) di dalam background thread atau thread yang sedang berjalan secara asynchronous.
+ 	  - adapun Thread untuk membuat web responsif dan powerful, yaitu thread async task / asyncronous
+ 	    a) asynchronous yaitu proses tidak berjalan berurutan, sehingga proses lain bisa masuk dan layar Android masih bisa kita jalankan.
+ 	    b) asynchronous membuat pengalaman pengguna menjadi lebih nyaman karena aplikasi tetap terasa responsif dan tidak mengalami freeze.
+ 	  - Thread adalah sekumpulan perintah (instruksi) yang dapat dilaksanakan (dieksekusi) secara beriringan dengan thread lainnya. 
+ 	  - Thread dicapai dengan menggunakan mekanisme time slice (ketika satu CPU melakukan perpindahan antara satu thread ke thread lainnya) atau multiprocess (ketika thread tersebut dijalankan oleh CPU yang berbeda dalam satu sistem). 
+ 	   	
+ 	@ Service: ( https://developer.android.com/reference/android/app/Service.html )
+ 	  - Service merupakan komponen tak terlihat yang dapat digunakan untuk menjalankan suatu proses di dalam aplikasi. Service biasanya digunakan untuk menjalankan proses yang memakan waktu lama atau yang membutuhkan komputasi intensif.
+ 	  - ada dua cara untuk memulai service :
+ 	    a) Started Service = Service berjenis ini adalah tipe yang dijalankan oleh komponen lain, misal activity. Sekali dijalankan, service ini akan berjalan selama belum dimatikan atau proses yang dijalankan selesai.
+ 	    b) Bound service = Service jenis ini merupakan tipe service yang dijalankan oleh komponen lain, Service ini akan tetap berjalan di background selama masih ada komponen lain yang mengikatnya.
  	
  	@ Receiver
 	
