@@ -1,12 +1,14 @@
 																		FUNDAMENTAL ANDROID
 													
 	<ShortCut>
-	Cara untuk membaca dokmentasi = https://developer.android.com/docs / ctrl + Q pada android studio untuk membaca dokumentasi	
-	untuk autocompleting method bawaan Android = ctrl(hold) + space and choice the method
-	untuk langsung menuju ke sumber layout arahkan cursor ke code layout lalu tahan ctrl hingga berbetuk link lalu tekan
-	</ShortCut>											
-	progress belajar : https://www.dicoding.com/academies/14/tutorials/181?from=179		
-	progress belajar : ##################################________________ 68%							
+		- Cara untuk membaca dokmentasi = https://developer.android.com/docs / ctrl + Q pada android studio untuk membaca dokumentasi	
+		- untuk autocompleting method bawaan Android = ctrl(hold) + space and choice the method
+		- untuk langsung menuju ke sumber layout arahkan cursor ke code layout lalu tahan ctrl hingga berbetuk link lalu tekan
+		- Documentation About Gradle = ( https://stackoverflow.com/questions/16754643/what-is-gradle-in-android-studio ) ( https://docs.gradle.org/current/userguide/userguide.html#getting-started )
+	</ShortCut>	
+											
+	progress belajar : https://www.dicoding.com/academies/14/tutorials/201?from=199		
+	progress belajar : ###########################################______ 88%							
 
 *	Komponen dasar yang digunakan untuk membuat aplikasi android :
 	- Activity = adalah hal yang menangani window (tampilan) yang akan ditampilkan di interface, dan activity memiliki life cycle bawaan android
@@ -22,7 +24,7 @@
 	- Activity merupakan salah satu komponen penting Android yang memiliki daur hidup (life cycle) dalam sebuah stack pada virtual sandbox
 	  yang disiapkan oleh Dalvik Virtual Machine (DVM) atau Android Runtime (ART) yang bersifat last in first out.
 	- Sebuah class Java / kotlin dinyatakan sebuah activity jika mewarisi (extends) superclass Activity atau turunannya seperti AppCompatActivity dan FragmentActivity.
-	- method yang ada pada lifeCycle Activity disebut CallBack Method digunakan untuk melakukan proses terkait state pada activity
+	- method yang ada pada lifeCycle Activity disebut CallBack Method digunakan untuk melakukan proses terkait state pada activity	
 
 2. Intent adalah mekanisme untuk melakukan sebuat action / komunikasi antar komponen seperti activity, services, dan broadcast receiver
 	- intent terbagi menjadi dua yaitu, intent exsplisit dan implisit
@@ -244,8 +246,39 @@
  	    a) https://developer.android.com/reference/android/content/BroadcastReceiver.html
  	    b) https://www.vogella.com/tutorials/AndroidBroadcastReceiver/article.html
  	    c) https://www.tutorialspoint.com/android/android_broadcast_receivers.htm
+ 	    
+13. Alarm Manager / Scheduler ( https://developer.android.com/reference/android/app/AlarmManager.html ) ( https://developer.android.com/training/scheduling/alarms.html#/h )
+	- adalah menentukan sebuah proses yang di jalankan secara terjadwal
+	- kelebihan menggunakan AlarmManager :
+	  a) Dapat menjalankan obyek intent berdasarkan waktu dan interval yang ditentukan.
+	  b) Bisa bekerja dengan baik bersama broadcast receiver untuk menjalankan komponen lain seperti service untuk melakukan operasi tertentu.
+	  c) Alarm berjalan di luar daur hidup aplikasi induknya sehingga kita bisa merancang fungsi alarm untuk melakukan sebuah aksi ketika aplikasi sedang tidak dijalankan,
+	  d) Esensi utama dari alarm manager adalah untuk meminimalkan penggunaan resource dan menghindari penggunaan timer dan background service  
 	
+14. Connect To Web API and Parsing JSON
+	@ Web API : ( https://www.youtube.com/watch?v=s7wmiS2mSXY&ab_channel=MuleSoftVideos )
+	  - link for looking public API :
+	    a) https://any-api.com/
+	    b) https://github.com/public-apis/public-apis
+	    c) https://github.com/farizdotid/DAFTAR-API-LOKAL-INDONESIA
+	  - salah satu bagian dari web API yang sering digunakan , yaitu Rest((REpresentation State Transfer)) API  
+	  - Pada protokol Rest API, terdapat beberapa request method yang biasa digunakan untuk proses CRUD (Create Read Update Delete), di antaranya adalah:
+	    a) POST : Untuk membuat data (Create)
+	    b) GET : Untuk membaca data (Read)
+	    c) PUT : Untuk mengubah data (Update)
+	    d) DELETE : Untuk menghapus data (Delete)
+	    
+	@ JSON
+	  - documentation :
+	    a) JSON Parsing = https://stackoverflow.com/questions/9605913/how-do-i-parse-json-in-android
+	    b) about JSON = https://www.json.org/json-id.html and https://www.youtube.com/watch?v=hrfuFt9YUQI&feature=youtu.be&t=2213&ab_channel=DicodingIndonesia
 	
+	@ Library for Halper
+	  - " implementation 'com.loopj.android:android-async-http:1.4.9 "
+	  
+15. Job Scheduler : ( https://medium.com/google-developers/scheduling-jobs-like-a-pro-with-jobscheduler-286ef8510129#.jr7ue1y8q ) 
+			    ( https://www.youtube.com/watch?v=XFN3MrnNhZA&index=36&list=PLWz5rJ2EKKc-lJo_RGGXL2Psr8vVCTWjM&ab_channel=AndroidDevelopers )
+	- Kelebihan yang ditawarkan oleh job scheduler adalah ia dapat menjalankan beragam proses secara bersamaan. Efek positifnya adalah daya tahan baterai akan lebih terjaga dari pada Alarm Manager
 	
 	
 	
