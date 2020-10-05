@@ -7,8 +7,8 @@
 		- Documentation About Gradle = ( https://stackoverflow.com/questions/16754643/what-is-gradle-in-android-studio ) ( https://docs.gradle.org/current/userguide/userguide.html#getting-started )
 	</ShortCut>	
 											
-	progress belajar : https://www.dicoding.com/academies/14/tutorials/201?from=199		
-	progress belajar : ###########################################______ 88%							
+	progress belajar : https://www.dicoding.com/academies/14/tutorials/207?from=5632		
+	progress belajar : #############################################____ 92%							
 
 *	Komponen dasar yang digunakan untuk membuat aplikasi android :
 	- Activity = adalah hal yang menangani window (tampilan) yang akan ditampilkan di interface, dan activity memiliki life cycle bawaan android
@@ -280,6 +280,10 @@
 			    ( https://www.youtube.com/watch?v=XFN3MrnNhZA&index=36&list=PLWz5rJ2EKKc-lJo_RGGXL2Psr8vVCTWjM&ab_channel=AndroidDevelopers )
 	- Kelebihan yang ditawarkan oleh job scheduler adalah ia dapat menjalankan beragam proses secara bersamaan. Efek positifnya adalah daya tahan baterai akan lebih terjaga dari pada Alarm Manager
 	
+16. WorkManager : ( https://medium.com/androiddevelopers/introducing-workmanager-2083bcfc4712 )
+			  ( https://codelabs.developers.google.com/codelabs/android-workmanager/#0 )
+			  ( https://developer.android.com/topic/libraries/architecture/workmanager )
+			  ( https://developer.android.com/guide/background/ )
 	
 	
 	
