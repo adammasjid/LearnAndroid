@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">My</string>
+    <string name="name">Name</string>
+    <string name="username">UserName</string>
+    <string name="repository">Repository</string>
+    <string name="_0">0</string>
+    <string name="company">Company</string>
+    <string name="google">Google</string>
+    <string name="location">Location</string>
+    <string name="indonesia">Indonesia</string>
+</resources>

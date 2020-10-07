@@ -1,14 +1,15 @@
 																		FUNDAMENTAL ANDROID
 													
 	<ShortCut>
+		- BACALAH DOCUMENTASI NYA ADA DI LINK ATAU PLATFORM LAIN , JANGAN DI SKIP................
 		- Cara untuk membaca dokmentasi = https://developer.android.com/docs / ctrl + Q pada android studio untuk membaca dokumentasi	
 		- untuk autocompleting method bawaan Android = ctrl(hold) + space and choice the method
 		- untuk langsung menuju ke sumber layout arahkan cursor ke code layout lalu tahan ctrl hingga berbetuk link lalu tekan
 		- Documentation About Gradle = ( https://stackoverflow.com/questions/16754643/what-is-gradle-in-android-studio ) ( https://docs.gradle.org/current/userguide/userguide.html#getting-started )
 	</ShortCut>	
 											
-	progress belajar : https://www.dicoding.com/academies/14/tutorials/207?from=5632		
-	progress belajar : #############################################____ 92%							
+	progress belajar : -	
+	progress belajar : ################################################# 100%							
 
 *	Komponen dasar yang digunakan untuk membuat aplikasi android :
 	- Activity = adalah hal yang menangani window (tampilan) yang akan ditampilkan di interface, dan activity memiliki life cycle bawaan android
@@ -167,17 +168,27 @@
 	- untuk mengimplementasikan kotlin extension = import kotlin.android.synthetic, diikuti dengan nama XML yang akan kita bind ke activity.
 	
 8. Navigation :
-	- adalah komponen yang digunakan untuk memepermudah berpindah halaman dan menerapkan behavior setiap halaman
-	- Sebaiknya gunakan package yang versi lama :
-	  a) in gradle.app: 
-	     apply plugin: "androidx.navigation.safeargs"
-	     implementation "android.arch.navigation:navigation-ui-ktx:1.0.0"
-    	     implementation "android.arch.navigation:navigation-fragment-ktx:1.0.0"	
-    	  b) in gradle.project: 
-    	     classpath "android.arch.navigation:navigation-safe-args-gradle-plugin:1.0.0"
-    	- dapat menerapkan behavior dari setiap action fragment dengan mudah 
-    	- dapat membuat deep link
-    	- dapat menerapakan slide animation
+	@ penjelasan Navigation
+	  - adalah komponen yang digunakan untuk memepermudah berpindah halaman dan menerapkan behavior setiap halaman
+	  - Sebaiknya gunakan package yang versi lama :
+	    a) in gradle.app: 
+		  apply plugin: "androidx.navigation.safeargs"
+		  implementation "android.arch.navigation:navigation-ui-ktx:1.0.0"
+	    	  implementation "android.arch.navigation:navigation-fragment-ktx:1.0.0"	
+	    b) in gradle.project: 
+	    	  classpath "android.arch.navigation:navigation-safe-args-gradle-plugin:1.0.0"
+	  - dapat menerapkan behavior dari setiap action fragment dengan mudah 
+	  - dapat membuat deep link
+	  - dapat menerapakan slide animation
+	  
+	@ Navigation Lanjutan
+	  - Task and Back Stack : ( https://developer.android.com/guide/components/activities/tasks-and-back-stack )
+	  - Launch mode and flag ( https://medium.com/@evanfang/real-understand-tasks-and-back-stack-7ddf9a05b24b )
+	    a) Mode Default = Setiap kali Intent, Instance baru terbuat. Bisa lebih dari satu di dalam sebuah task. 
+	    b) singleTop | FLAG_ACTIVITY_SINGLE_TOP = Gunakan lagi instance jika sudah ada di paling atas task dan memanggil onNewIntent(). Jika tidak di paling atas, instance  akan dibuat lagi. 
+	    c) singleTask | FLAG_ACTIVITY_NEW_TASK = Gunakan lagi instance jika sudah ada di dalam task yang sama di mana pun posisinya, kemudian memanggil onNewIntent().
+	    d) singleInstance = Hanya ada satu instance di dalam satu task.
+    	  - TaskStackBuilder ( https://developer.android.com/training/notify-user/navigation.html?utm_campaign=android_series_tasks_back_stack_051216&utm_source=medium&utm_medium=blog#DirectEntry )
     	
 9. Material Design :
     	@ generally, Material Design Navigation ada dua jenis :
@@ -284,6 +295,12 @@
 			  ( https://codelabs.developers.google.com/codelabs/android-workmanager/#0 )
 			  ( https://developer.android.com/topic/libraries/architecture/workmanager )
 			  ( https://developer.android.com/guide/background/ )
+			  
+17. ViewModel
+    - ViewModel = Kelas ViewModel dirancang untuk menyimpan dan mengelola UI. Kelas ViewModel memungkinkan kita untuk dapat mempertahankan data ketika terjadi configuration changes seperti rotasi layar.
+    - AndroidViewModel = AndroidViewModel adalah subclass dari ViewModel yang memiliki fungsi yang mirip. Jika kamu membutuhkan context di dalam pattern ViewModel,
+                         kamu bisa menggunakan AndroidViewModel, karena kita bisa memanggil getApplicationContext di dalamnya. 
+    
 	
 	
 	
