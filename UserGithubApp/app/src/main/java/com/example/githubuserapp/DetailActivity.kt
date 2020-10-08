@@ -2,6 +2,7 @@ package com.example.githubuserapp
 
 import android.annotation.SuppressLint
 import android.os.Bundle
+import android.os.Parcelable
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -11,6 +12,7 @@ import kotlinx.android.synthetic.main.activity_detail.*
 import kotlinx.android.synthetic.main.item_card_user.*
 
 class DetailActivity : AppCompatActivity() {
+
     companion object {
         const val ITEM_EXTRA = "extra_person"
     }
@@ -23,8 +25,16 @@ class DetailActivity : AppCompatActivity() {
         supportActionBar?.title = "User Detail";
         supportActionBar?.setDisplayHomeAsUpEnabled(true);
 
-        val user = intent.getParcelableExtra<UserData>(ITEM_EXTRA)
+        setData()
+    }
 
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
+    }
+
+    private fun setData() {
+        val user = intent.getParcelableExtra<UserData>(ITEM_EXTRA)
         Glide.with(this)
             .load(user?.avatar)
             .into(img_photo_profile)
@@ -35,10 +45,5 @@ class DetailActivity : AppCompatActivity() {
         location.text = user?.location
         company.text = user?.company
         repository.text = user?.repository
-    }
-
-    override fun onSupportNavigateUp(): Boolean {
-        onBackPressed()
-        return true
     }
 }

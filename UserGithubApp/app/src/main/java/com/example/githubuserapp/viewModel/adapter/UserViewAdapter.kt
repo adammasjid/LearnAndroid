@@ -1,14 +1,12 @@
-package com.example.githubuserapp.adapter
+package com.example.githubuserapp.viewModel.adapter
 
 import android.annotation.SuppressLint
-import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
-import com.example.githubuserapp.DetailActivity
 import com.example.githubuserapp.R
 import com.example.githubuserapp.model.UserData
 import kotlinx.android.synthetic.main.item_card_user.view.*
@@ -50,6 +48,7 @@ class UserViewAdapter(private val userData: ArrayList<UserData>) : RecyclerView.
             }
         }
     }
+
     interface OnItemClickCallback {
         fun onItemClicked(data: UserData)
     }
