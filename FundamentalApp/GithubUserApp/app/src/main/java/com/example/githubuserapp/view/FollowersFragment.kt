@@ -5,7 +5,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.githubuserapp.R
@@ -48,7 +47,7 @@ class FollowersFragment : Fragment() {
         followersViewModel.getDataGit(activity!!.applicationContext, dataUser?.username.toString())
         showLoading(true)
 
-        followersViewModel.getListFollowers().observe(activity!!, Observer { listFollower ->
+        followersViewModel.getListFollowers().observe(activity!!, { listFollower ->
             if (listFollower != null) {
                 adapter.setData(listFollower)
                 showLoading(false)

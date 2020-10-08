@@ -2,7 +2,6 @@ package com.example.githubuserapp.view
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.Observer
 import android.os.Bundle
 import android.provider.Settings
 import android.view.Menu
@@ -70,7 +69,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun configMainViewModel(adapter: ListDataUsersAdapter) {
-        mainViewModel.getListUsers().observe(this, Observer { listUsers ->
+        mainViewModel.getListUsers().observe(this, { listUsers ->
             if (listUsers != null) {
                 adapter.setData(listUsers)
                 showLoading(false)

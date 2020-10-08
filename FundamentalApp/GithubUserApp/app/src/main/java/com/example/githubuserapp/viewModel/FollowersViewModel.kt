@@ -25,11 +25,11 @@ class FollowersViewModel : ViewModel() {
         return listFollowersMutable
     }
 
-    fun getDataGit(context: Context, id: String) {
+    fun getDataGit(context: Context, username: String) {
         val httpClient = AsyncHttpClient()
         httpClient.addHeader("Authorization","fc6d9d964734f1e2dce354574f814dd45cdcc6b0")
         httpClient.addHeader("User-Agent", "request")
-        val urlClient = "https://api.github.com/users/$id/followers"
+        val urlClient = "https://api.github.com/users/$username/followers"
 
         httpClient.get(urlClient, object: AsyncHttpResponseHandler() {
             override fun onSuccess(

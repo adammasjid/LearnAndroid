@@ -21,6 +21,12 @@ class DetailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail)
 
+        val viewPagerDetail = ViewPagerDetailAdapter(this, supportFragmentManager)
+        viewpager.adapter = viewPagerDetail
+        tabs.setupWithViewPager(viewpager)
+        supportActionBar?.elevation = 0f
+
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
         showTitleActionBar()
         setData()
         orientationChanged()
