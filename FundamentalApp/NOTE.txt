@@ -6,6 +6,7 @@
 		- untuk autocompleting method bawaan Android = ctrl(hold) + space and choice the method
 		- untuk langsung menuju ke sumber layout arahkan cursor ke code layout lalu tahan ctrl hingga berbetuk link lalu tekan
 		- Documentation About Gradle = ( https://stackoverflow.com/questions/16754643/what-is-gradle-in-android-studio ) ( https://docs.gradle.org/current/userguide/userguide.html#getting-started )
+		- untuk select all same word = alt + j
 	</ShortCut>	
 											
 	progress belajar : -	

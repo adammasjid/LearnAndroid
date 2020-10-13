@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         setContentView(R.layout.activity_main)
 
         mainViewModel = MainViewModel(CuboidModel())
-//        edtWidth = findViewById(R.id.edt_width)
+        edtWidth = findViewById(R.id.edt_width)
         edtHeight = findViewById(R.id.edt_height)
         edtLength = findViewById(R.id.edt_length)
         tvResult = findViewById(R.id.tv_result)

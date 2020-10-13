@@ -47,6 +47,20 @@ class MainActivityTest {
         // TODO code dibawah jika dibaca yaitu seperti:
         // Memastikan sebuah view dengan id tv_result mempunyai teks yang sama dengan dummyCircumference.
         onView(withId(R.id.tv_result)).check(matches(withText(dummyCircumference)))
+        /**
+         * @MARKER
+         * TODO untuk melakukan testing harus dengan step yang sesuai seperti dibawah
+         *  diatas hanya penjelasan dari setiap code
+         */
+//        onView(withId(R.id.edt_length)).perform(typeText(dummyLength), closeSoftKeyboard())
+//        onView(withId(R.id.edt_width)).perform(typeText(dummyWidth), closeSoftKeyboard())
+//        onView(withId(R.id.edt_height)).perform(typeText(dummyHeight), closeSoftKeyboard())
+//        onView(withId(R.id.btn_save)).check(matches(isDisplayed()))
+//        onView(withId(R.id.btn_save)).perform(click())
+//        onView(withId(R.id.btn_calculate_circumference)).check(matches(isDisplayed()))
+//        onView(withId(R.id.btn_calculate_circumference)).perform(click())
+//        onView(withId(R.id.tv_result)).check(matches(isDisplayed()))
+//        onView(withId(R.id.tv_result)).check(matches(withText(dummyCircumference)))
     }
 
     // below for test Surface Area

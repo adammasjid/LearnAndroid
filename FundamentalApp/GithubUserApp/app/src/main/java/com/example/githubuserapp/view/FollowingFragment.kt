@@ -22,7 +22,6 @@ class FollowingFragment : Fragment() {
         const val EXTRA_DETAIL = "extra_detail"
     }
 
-    private var bool: Boolean = false
     private var listData: ArrayList<DataFollowing> = ArrayList()
     private lateinit var adapter: ListFollowingAdapter
     private lateinit var followingViewModel: FollowingViewModel

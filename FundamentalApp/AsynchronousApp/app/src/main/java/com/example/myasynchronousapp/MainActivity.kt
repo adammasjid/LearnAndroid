@@ -11,36 +11,64 @@ import java.lang.ref.WeakReference
 
 /**
  * TODO : Best Practice for implementation Asynchronous
- * @BackgroundThread : example code below, (https://developer.android.com/guide/components/processes-and-threads.html)
+ * @RuleForMakingAsynchronous
+   1. Jangan Memblock UI Thread
+   2. Jangan melakukan pemanggilan UI Komponen ( casting view ) di Background Thread atau Thread yang sedang berjalan di Asynchronous
+
+ * [BackgroundThread] : example code below, (https://developer.android.com/guide/components/processes-and-threads.html)
  *   fun onClick(v: View) {
-        Thread(Runnable {
+        Thread(Runnable { this method for make new thread without blocking ui thread
             val txt = loadStringFromNetwork("http://example.com/string.json")
-            textView.post(Runnable() {
+            textView.post(Runnable() { and this for adding ui on ui thread for better performance asynchronous
                 textView.setText(txt)
             }
         }).start()
     }
- * @Handler
- * @AsyncTask, point about asyncTask, below : ( https://developer.android.com/reference/android/os/AsyncTask.html )
+
+ * [Handler] = adalah cara untuk membuat asynchronous menjadi lebih specific menggunakan satu property
+ *  example property to implement the Handler :
+        dengan membuat property ini,
+        automatically handler akan memproses message dan objek runnable lainnya yang berhubungan dengan thread.
+        Ketika handler diciptakan, maka dia terkait dengan thread di mana diciptakan.
+        private val handler = Handler() {
+            fun handleMessage(msg:Message) {
+            val message = msg.obj as String
+            textView.text = message
+            }
+        }
+        fun onClick(v:View) {
+            Thread(Runnable {
+                public override fun run() {
+                val txt = loadStringFromNetwork("http://example.com/string.json")
+                val msg = Message.obtain()
+                msg.obj = txt
+                msg.setTarget(handler)
+                msg.sendToTarget()
+            }
+            }).start()
+        }
+
+ *
+ * [AsyncTask], point about asyncTask, below : ( https://developer.android.com/reference/android/os/AsyncTask.html )
     - Diperuntukkan untuk proses asynchronous dan mampu berkomunikasi dengan ui thread untuk mengirimkan hasil proses.
     - Kelas Java yang dibuat harus inherit kepada AsyncTask.
     - Kasus umum yang biasa diterapkan adalah ketika mengunduh berkas dari Internet dan dengan menampilkan perkembangan pengunduhan di layar.
- * @Params_Progress_and_Result, meaning about them is :
-    - Params :  Tipe parameter yang akan menjadi inputan untuk proses asynchronous.
-    - Progress :  Tipe satuan unit untuk memberi kabar perkembangan ke ui thread.
-    - Result  :  Tipe hasil dari proses asynchronous yang dijalankan.
- * @MainMethodFromAsyncTask :
-    - [onPreExecute] Metode ini akan dijalankan pertama kali sebelum proses asynchronous dilakukan.
-    - [doInBackground] Metode ini akan dijalankan setelah [onPreExecute]. Di sinilah proses asynchronous terjadi. Pada kasus di atas, metode [doInBackground]...
-      akan melakukan pengunduhan berkas dari network melalui metode [downloadFile],dan hasil perkembangannya dikirim melalui metode [publishProgress].
-    - [onProgressUpdate] Metode ini yang akan menerima input dari apa yang dilakukan oleh metode publishProgress.
-    - [onPostExecute] Setelah proses di doInBackground() selesai, maka hasilnya akan dikirimkan ke metode onPostExecute(). Kemudian prosesnya akan dikembalikan lagi ke ui thread.
- * @RunningAsyncTask, code for this task
- *   DownloadFilesTask().execute(url1,url2,url3)
- * @Coroutine(Kotlin) : ( https://kotlinlang.org/docs/tutorials/coroutines/coroutines-basic-jvm.html ) and ( https://www.lukaslechner.com/understanding-kotlin-coroutines-with-this-mental-model/ )
-    - Coroutine adalah salah satu fitur unggulan dari Kotlin yang diperkenalkan sejak versi 1.3. Walaupun coroutines dan threads bekerja dengan cara sama,
-    - coroutines jauh lebih ringan dan efisien. Jutaan coroutines dapat berjalan pada beberapa threads.
-    - harus menambahkan dependency untuk mengimplementasikan coroutine <code
+     * @Params_Progress_and_Result, meaning about them is :
+        - Params :  Tipe parameter yang akan menjadi inputan untuk proses asynchronous.
+        - Progress :  Tipe satuan unit untuk memberi kabar perkembangan ke ui thread.
+        - Result  :  Tipe hasil dari proses asynchronous yang dijalankan.
+     * @MainMethodFromAsyncTask : method utama yang ada pada AsyncTask
+        - [onPreExecute] Metode ini akan dijalankan pertama kali sebelum proses asynchronous dilakukan.
+        - [doInBackground] Metode ini akan dijalankan setelah [onPreExecute]. Di sinilah proses asynchronous terjadi. Pada kasus di atas, metode [doInBackground]...
+          akan melakukan pengunduhan berkas dari network melalui metode [downloadFile],dan hasil perkembangannya dikirim melalui metode [publishProgress].
+        - [onProgressUpdate] Metode ini yang akan menerima input dari apa yang dilakukan oleh metode publishProgress.
+        - [onPostExecute] Setelah proses di doInBackground() selesai, maka hasilnya akan dikirimkan ke metode onPostExecute(). Kemudian prosesnya akan dikembalikan lagi ke ui thread.
+     * @RunningAsyncTask, code for this task
+     *   DownloadFilesTask().execute(url1,url2,url3)
+     * @Coroutine(Kotlin) : ( https://kotlinlang.org/docs/tutorials/coroutines/coroutines-basic-jvm.html ) and ( https://www.lukaslechner.com/understanding-kotlin-coroutines-with-this-mental-model/ )
+        - Coroutine adalah salah satu fitur unggulan dari Kotlin yang diperkenalkan sejak versi 1.3. Walaupun coroutines dan threads bekerja dengan cara sama,
+        - coroutines jauh lebih ringan dan efisien. Jutaan coroutines dapat berjalan pada beberapa threads.
+        - harus menambahkan dependency untuk mengimplementasikan coroutine <code
  */
 /* TODO: is implementation asynchronous with coroutine.kt */
 //class MainActivity : AppCompatActivity() { // if make async without espresso must extend with interface for AsyncCallBack
@@ -138,10 +166,7 @@ class MainActivity : AppCompatActivity(), MyAsyncCallback {
     * WeakReference disarankan untuk menghindari memory leak yang bisa terjadi dalam AsyncTask. */
     private class DemoAsync(myListener: MyAsyncCallback) : AsyncTask<String, Void, String>() {
 
-        private val myListener: WeakReference<MyAsyncCallback>
-        init {
-            this.myListener = WeakReference(myListener)
-        }
+        private val myListener: WeakReference<MyAsyncCallback> = WeakReference(myListener)
 
         companion object {
             private val LOG_ASYNC = "DemoAsync"
