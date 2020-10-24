@@ -293,7 +293,7 @@
 	- Kelebihan yang ditawarkan oleh job scheduler adalah ia dapat menjalankan beragam proses secara bersamaan. Efek positifnya adalah daya tahan baterai akan lebih terjaga dari pada Alarm Manager
 	
 16. WorkManager : ( https://medium.com/androiddevelopers/introducing-workmanager-2083bcfc4712 )
-			  ( https://codelabs.developers.google.com/codelabs/android-workmanager/#0 )
+			  ( https://codelabs.developers.google.com/codelabs/android-workmanager/#0 )	
 			  ( https://developer.android.com/topic/libraries/architecture/workmanager )
 			  ( https://developer.android.com/guide/background/ )
 			  
@@ -301,6 +301,16 @@
     - ViewModel = Kelas ViewModel dirancang untuk menyimpan dan mengelola UI. Kelas ViewModel memungkinkan kita untuk dapat mempertahankan data ketika terjadi configuration changes seperti rotasi layar.
     - AndroidViewModel = AndroidViewModel adalah subclass dari ViewModel yang memiliki fungsi yang mirip. Jika kamu membutuhkan context di dalam pattern ViewModel,
                          kamu bisa menggunakan AndroidViewModel, karena kita bisa memanggil getApplicationContext di dalamnya. 
+                         
+                         
+18. Local Storage : ( documentation already on android web )
+	- local storage adalah penyimpanan lokal yang khusus yang berada di dalam android untuk menyimpan file mentah
+	- local storage akan tersimpan pada sd-card pada perangkat androidS
+	- penyimpanan ini bisa hilang bila user menghapusnya
+	
+19. Shared Preferences : ( https://blog.sekolahmobile.com/penggunaan-shared-preferences-pada-android-dengan-kotlin/ )
+	- Shared Preferences merupakan media penyimpanan yang hanya bisa menyimpan data sederhana berupa data yang bertipe primitif (seperti Float, Int, Long, String dan Boolean) dalam file internal yang ada di aplikasi dalam bentuk key-value. 
+                         
     
 	
 	
