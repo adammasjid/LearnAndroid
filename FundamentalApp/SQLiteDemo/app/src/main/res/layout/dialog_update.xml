@@ -8,7 +8,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Update Record"
+        android:text="Update Record ( Click for update )"
         android:textColor="@android:color/black"
         android:textSize="18sp"
         android:textStyle="bold" />
@@ -17,18 +17,22 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
+        android:paddingTop="7dp"
         android:orientation="horizontal">
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.25"
-            android:text="Name"
+            android:text="Name     :"
+            android:textColor="@color/black"
             android:textSize="18sp" />
 
         <EditText
             android:id="@+id/etUpdateName"
             android:layout_width="0dp"
+            android:background="@color/white"
+            android:textColor="@color/black"
             android:layout_height="wrap_content"
             android:layout_weight="0.75"
             android:hint="Enter Name" />
@@ -44,7 +48,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.25"
-            android:text="Email ID"
+            android:background="@color/white"
+            android:textColor="@color/black"
+            android:text="Email ID :"
             android:textSize="18sp" />
 
         <EditText
@@ -52,6 +58,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.75"
+            android:background="@color/white"
+            android:textColor="@color/black"
             android:inputType="textEmailAddress"
             android:hint="Enter Email ID" />
     </LinearLayout>

@@ -52,11 +52,11 @@ class ItemAdapter(val context: Context, val items: ArrayList<EmpModelClass>) :
             holder.llMain.setBackgroundColor(
                     ContextCompat.getColor(
                             context,
-                            R.color.colorLightGray
+                            R.color.colorGray
                     )
             )
         } else {
-            holder.llMain.setBackgroundColor(ContextCompat.getColor(context, R.color.colorWhite))
+            holder.llMain.setBackgroundColor(ContextCompat.getColor(context, R.color.white))
         }
         // update view
         holder.ivEdit.setOnClickListener { view ->

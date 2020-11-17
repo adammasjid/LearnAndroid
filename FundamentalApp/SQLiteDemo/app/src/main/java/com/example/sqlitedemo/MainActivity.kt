@@ -52,7 +52,9 @@ class MainActivity : AppCompatActivity() {
             }
             else -> {
                 etName.error = "Name cannot be blank"
-                etEmailId.error = "Email cannot be blank"
+                if (email.isNotEmpty()) {
+                    etEmailId.text
+                }
             }
         }
     }
@@ -116,22 +118,38 @@ class MainActivity : AppCompatActivity() {
 
             val databaseHandler: DatabaseHandler = DatabaseHandler(this)
 
-            if (!name.isEmpty() && !email.isEmpty()) {
-                val status =
-                        databaseHandler.updateEmployee(EmpModelClass(empModelClass.id, name, email))
-                if (status > -1) {
-                    Toast.makeText(applicationContext, "Record Updated.", Toast.LENGTH_LONG).show()
+            when {
+                name.isNotEmpty() -> {
+                    if (isValidEmail(email)){
+                        val status = databaseHandler.updateEmployee(EmpModelClass(empModelClass.id,name,email))
+                        if (status > -1) {
+                            Toast.makeText(applicationContext, "Record Updated.", Toast.LENGTH_LONG).show()
 
-                    setupListOfDataIntoRecyclerView()
+                            setupListOfDataIntoRecyclerView()
 
-                    updateDialog.dismiss() // Dialog will be dismissed
+                            updateDialog.dismiss() // Dialog will be dismissed
+                        }
+                    }else if (email.isEmpty()) {
+                        Toast.makeText(
+                            applicationContext,
+                            "Email cannot be blank",
+                            Toast.LENGTH_LONG
+                        ).show()
+                    }else {
+                        Toast.makeText(
+                            applicationContext,
+                            "Input correct Email address",
+                            Toast.LENGTH_LONG
+                        ).show()
+                    }
                 }
-            } else {
-                Toast.makeText(
+                else -> {
+                    Toast.makeText(
                         applicationContext,
                         "Name or Email cannot be blank",
                         Toast.LENGTH_LONG
-                ).show()
+                    ).show()
+                }
             }
         })
         updateDialog.tvCancel.setOnClickListener(View.OnClickListener {

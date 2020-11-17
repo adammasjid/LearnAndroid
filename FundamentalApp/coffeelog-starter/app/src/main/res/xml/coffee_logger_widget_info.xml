@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+this is the configuration file we described earlier with information about the refresh rate, resizability, dimensions, etc.
+This is the file you’re going to edit in order to provide a configuration Activity for the Widget.
+ -->
+<!--
+To launch the configuration screen whenever the user adds a widget, you need to add it to the widget configuration file.
+add = android:configure="com.raywenderlich.android.coffeelogs.CoffeeLoggerWidgetConfigureActivity"
+-->
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+    android:configure="com.raywenderlich.android.coffeelogs.CoffeeLoggerWidgetConfigureActivity"
+    android:initialKeyguardLayout="@layout/coffee_logger_widget"
+    android:initialLayout="@layout/coffee_logger_widget"
+    android:minHeight="110dp"
+    android:minWidth="180dp"
+    android:previewImage="@drawable/example_appwidget_preview"
+    android:resizeMode="horizontal|vertical"
+    android:updatePeriodMillis="86400000"
+    android:widgetCategory="home_screen">
+
+</appwidget-provider>

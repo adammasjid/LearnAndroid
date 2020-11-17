@@ -310,6 +310,24 @@
 	
 19. Shared Preferences : ( https://blog.sekolahmobile.com/penggunaan-shared-preferences-pada-android-dengan-kotlin/ )
 	- Shared Preferences merupakan media penyimpanan yang hanya bisa menyimpan data sederhana berupa data yang bertipe primitif (seperti Float, Int, Long, String dan Boolean) dalam file internal yang ada di aplikasi dalam bentuk key-value. 
+	
+20. SQLite : 
+	- adalah DBMS ( Database Management System ) bawaan android
+
+21. Content Provider :
+	- adalah suatu tools bawaan android yang dimaksudkan untuk sharing data ke aplikasi lain
+
+22. Android Widgets : ( https://www.raywenderlich.com/33-android-app-widgets-tutorial )
+	- adalah sebuah aplikasi yang bias ditanamkan di aplikasi lain
+	- widget bias terhubung dengan aplikasi lain dan menampilkan data secara up to date
+	- cara  membuat widget : 
+	  a) right click on main project
+	  b) select add -> widget -> app widget
+	- untuk mengirim data dari aplikasi ke widget tidak bisa menggunakan intent, karena widget berada di aplikasi dan proses android yang berbeda,
+	  maka dari ini harus menggunakan [PendingIntent]
+
+23. Android Notification : https://developer.android.com/guide/topics/ui/notifiers/notifications?hl=id
+	- 
                          
     
 	
