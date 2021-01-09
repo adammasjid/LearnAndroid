@@ -327,7 +327,15 @@
 	  maka dari ini harus menggunakan [PendingIntent]
 
 23. Android Notification : https://developer.android.com/guide/topics/ui/notifiers/notifications?hl=id
-	- 
+
+24. Firebase: https://developer.android.com/studio/projects/templates?hl=id
+	- Firebase adalah platform seluler yang membantu Anda mengembangkan aplikasi berkualitas tinggi secara cepat, 
+	  meningkatkan basis pengguna, dan menghasilkan uang lebih banyak. Firebase terdiri dari fitur pelengkap yang dapat Anda padu padankan sesuai kebutuhan, dengan Google Analytics untuk Firebase sebagai intinya.
+	- gunakan tools-> firebase = tools untuk manage firebase in android studio
+	  a) Connect the project with firebase
+	  b) implementasikan dependency firebase di build.gradle:
+	     - Authentication
+	     - Realtime Databse
                          
     
 	

@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">AuthApp</string>
+    <string name="firebase_app">FireBase App</string>
+    <string name="your_awesome_app">Your Awesome App</string>
+    <string name="email_address">Email Address</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="register">Register</string>
+    <string name="full_name">Full Name</string>
+    <string name="age">Age</string>
 </resources>
