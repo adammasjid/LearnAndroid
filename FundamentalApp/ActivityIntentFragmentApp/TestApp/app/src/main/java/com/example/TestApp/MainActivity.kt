@@ -49,8 +49,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         """.trimIndent()
 
         //Note Activity
-        val btnNotesActivity: Button = findViewById(R.id.btn_move_note_activity)
-        btnNotesActivity.setOnClickListener(this)
+        btn_move_note_activity.setOnClickListener(this)
         //intent activity
         val btnMoveActivity: Button = findViewById(R.id.btn_move_activity)
         btnMoveActivity.setOnClickListener(this)
@@ -109,7 +108,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             }
             // below is implicit intent
             R.id.btn_dial_number -> {
-                var phoneNumber = "081299224589"
+                val phoneNumber = "081299224589"
                 val dialNumber = Intent(Intent.ACTION_DIAL, Uri.parse("tel:$phoneNumber"))
                 startActivity(dialNumber)
                 /**
